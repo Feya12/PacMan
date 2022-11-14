@@ -3,6 +3,7 @@
 ## 14 November 2022
 * Mask the labyrinth `ff`
 * Place the first phase of the PacMan on top of the labyrinth `ff`
+* Make a button that shows the labyrinth without the dots and with the dots `ff`
 * Think how you can animate it `ff`
 
 
