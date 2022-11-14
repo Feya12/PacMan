@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        .mask1 {
+          -webkit-mask-image: url(pacman-ff/spritesheets/spritesheet1.png);
+          mask-image: url(pacman-ff/spritesheets/spritesheet1.png);
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;    
+        }
+    </style>
+    
 </head>
-<body>
-    <img src="spritesheets/spritesheet.png" alt="spritesheet">
+<body> 
+    <div class="mask1">
+         <img src="spritesheet2.png" alt="spritesheet" width="600" height="400">
+     </div>
 </body>
 </html>
