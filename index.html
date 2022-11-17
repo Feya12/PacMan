@@ -9,33 +9,43 @@
 }
 .container {
     position: relative;
+    top: 225px;
+    left: -450px;  
+
 
 } 
-#sprite1{
+
+#pacman{
     position:absolute;
-    clip: rect(0,0,0,0) ;
+    clip: rect(0,470px,460px,455px);
+
 }
 .container1 {
-    position: relative;
+    position: relative; 
 } 
 #sprite2{
     position:absolute;
     clip: rect(0, 225px, 270px, 0);
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+
 }
 </style>
 </head>
 <body>
 
 <!-- comments 
-  
+ 
  -->
 <div class="container">
-    <img id="" src="" />
-  </div>
-<div class="container1">
-    <img id="sprite2" src="spritesheets/spritesheet.png" />
-  </div>
 
+    <img id="pacman" src="spritesheets/spritesheet.png" />
+  </div>
+ 
+<div class="container1">
+    <img id="sprite2" src="spritesheets/spritesheet.png"  />
+  </div>
 
 </body>
 </html>
