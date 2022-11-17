@@ -1,19 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <style>
-        .mask1 {
-          -webkit-mask-image: url(pacman-ff/spritesheets/spritesheet1.png);
-          mask-image: url(pacman-ff/spritesheets/spritesheet1.png);
-          -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;    
-        }
-    </style>
-    
+<style>
+.mask1 {
+  max-width: 600px;
+  height: 350px;
+  background-image: url(sprite2);
+}
+.container {
+    position: relative;
+
+} 
+#sprite1{
+    position:absolute;
+    clip: rect(0,0,0,0) ;
+}
+.container1 {
+    position: relative;
+} 
+#sprite2{
+    position:absolute;
+    clip: rect(0, 225px, 270px, 0);
+}
+</style>
 </head>
-<body> 
-    <div class="mask1">
-         <img src="spritesheet2.png" alt="spritesheet" width="600" height="400">
-     </div>
+<body>
+
+<!-- comments 
+  
+ -->
+<div class="container">
+    <img id="" src="" />
+  </div>
+<div class="container1">
+    <img id="sprite2" src="spritesheets/spritesheet.png" />
+  </div>
+
+
 </body>
 </html>
+ 
+
+
