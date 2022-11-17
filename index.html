@@ -1,54 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-.mask1 {
-  max-width: 600px;
-  height: 350px;
-  background-image: url(sprite2);
-}
-.container {
-    position: relative;
-    top: 225px;
-    left: -450px;  
+  <style>
+    .mask1 {
+      max-width: 600px;
+      height: 350px;
+      background-image: url(sprite2);
+    }
 
+    #pacman {
+      position: absolute;
+      clip: rect(0, 100px, 50px, 0);
+      top: 500px;
+      left:200px;
 
-} 
+      
+    }
+    #mapWithDots {
+      position: absolute;
+      clip: rect(0, 225px, 270px, 0);
+      left: 0px;
+      top: 0px;
+      z-index: -1;
 
-#pacman{
-    position:absolute;
-    clip: rect(0,470px,460px,455px);
-
-}
-.container1 {
-    position: relative; 
-} 
-#sprite2{
-    position:absolute;
-    clip: rect(0, 225px, 270px, 0);
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-
-}
-</style>
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- comments 
- 
+  <!-- comments 
+   
  -->
-<div class="container">
-
-    <img id="pacman" src="spritesheets/spritesheet.png" />
+  <div>
+ <img id="mapWithDots" src="spritesheets/spritesheet.png"> 
+     <img id="pacman" src="spritesheets/spritesheet.png">
   </div>
- 
-<div class="container1">
-    <img id="sprite2" src="spritesheets/spritesheet.png"  />
-  </div>
+<script>
+var pacman=document.getElementById('pacman');
+pacman.style.left='700px'
 
+</script>
 </body>
+
 </html>
- 
-
-
