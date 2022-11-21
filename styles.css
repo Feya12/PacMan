@@ -1,0 +1,17 @@
+    #pacman {
+      position: absolute;
+      clip: rect(0, 470px, 15px, 455px);
+      top: 200px;
+      right:0px;
+
+
+    }
+
+    #mapWithDots {
+      position: absolute;
+      clip: rect(0, 225px, 270px, 0);
+      left: 450px;
+      top: 0px;
+      z-index: -1;
+
+    }
