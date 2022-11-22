@@ -10,18 +10,38 @@
 <body>
 
   <!-- comments 
-   
+
+   prozrachen background na pacman-a
+   da wzimame klavisha s while/switch
+   game loop, framerate?
+   while da prowerqwa dali sa presnati key (w,a,s,d i escape)
+   da murda w mapa
  -->
   <div>
  <img id="mapWithDots" src="spritesheets/spritesheet.png"> 
      <img id="pacman" src="spritesheets/spritesheet.png">
   </div>
 <script>
-   
+
+    var object1 = document.getElementById('pacman');
+                function moveLeft() {
+                        document.getElementById("pacman").style.left += "50px";
+                }   
+                function moveRight(){
+                      document.getElementById("pacman").style.right += "50px";
+                }
+                function moveDown(){
+                        document.getElementById("pacman").style.bottom += "50px";
+
+                function moveUp(){
+                       document.getElementById("pacman").style.top += "50px";
+                }
+ }
 </script>
 
- 
+
 
 </body>
+               
 
 </html>
