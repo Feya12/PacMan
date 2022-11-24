@@ -13,8 +13,9 @@ function moveUp(pacman) {
     pacman.style.top -= "50px";
 }
 let pacman = document.getElementById('pacman');
-function name1(){
-
+function gameLoop(){
+// smenqm w css mejdu image s zatworena i otworena usta, da se smenq na wseki gameloop
+pacman.id='pacman1';
     document.addEventListener('keydown', function (e) {
     switch (e.key) {
         case 'w': moveUp(pacman); break;
@@ -27,12 +28,15 @@ function name1(){
 )
 
 }
-setInterval(name1,15)
+setInterval(gameLoop,90)
+
 
 
 
 
 /*
+ako id e pacman = pacman1;
+ako id pacman1 = pacman;
   while (e.key === 'W' ) {
       
       while (i<100, i++){

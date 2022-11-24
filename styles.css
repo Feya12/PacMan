@@ -1,8 +1,6 @@
     #pacman {
       position: absolute;
       clip: rect(0, 470px, 15px, 455px);
-      top: 200px;
-      right:0px;
 
 
     }
@@ -14,4 +12,31 @@
       top: 0px;
       z-index: -1;
 
+    }
+    #pacman1{
+      position: absolute;
+      clip: rect(20px, 485px, 15px, 450px);
+
+    }
+
+    #ghostRed{
+      position: absolute;
+      clip: rect(65px, 470px, 80px, 455px);
+     
+    }
+    #ghostPink{
+      position: absolute;
+      clip: rect(80px, 470px, 95px, 455px);
+      top: 50px;
+    }
+    #ghostBlue{
+      position: absolute;
+      clip: rect(95px, 470px, 110px, 455px);
+      top:100px;
+      
+    }
+    #ghostOrange{
+      position: absolute;
+      clip: rect(112px, 470px, 127px, 455px);
+      top:150px;
     }
