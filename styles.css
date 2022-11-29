@@ -3,7 +3,7 @@
       clip: rect(0, 225px, 270px, 0);
       left: 450px;
       top: 0px;
-      z-index: -2;
+      z-index: -1;
 
     }
     #ghostRed{
@@ -11,28 +11,28 @@
       clip: rect(65px, 470px, 80px, 455px);
       top:20px;
       left:100px;
-      z-index: -1;
+      z-index: 2;
     }
     #ghostPink{
       position: absolute;
       clip: rect(80px, 470px, 95px, 455px);
       top: 30px;
       left:85px;
-      z-index: -1;
+      z-index: 2;
     }
     #ghostBlue{
       position: absolute;
       clip: rect(95px, 470px, 110px, 455px);
       top: 15px;
       left: 100px;
-      z-index: -1;
+      z-index: 2;
     }
     #ghostOrange{
       position: absolute;
       clip: rect(112px, 470px, 127px, 455px);
       top:-2px;
       left: 115px;
-      z-index: -1;
+      z-index: 2;
     }
     #frame{
     height:248px;
