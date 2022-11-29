@@ -1,17 +1,52 @@
-    #pacman {
-      position: absolute;
-      clip: rect(0, 470px, 15px, 455px);
-      top: 180px;
-      left: 100px;
-    }
-
     #mapWithDots {
       position: absolute;
       clip: rect(0, 225px, 270px, 0);
       left: 450px;
       top: 0px;
-      z-index: -1;
+      z-index: -2;
 
+    }
+    #ghostRed{
+      position: absolute;
+      clip: rect(65px, 470px, 80px, 455px);
+      top:20px;
+      left:100px;
+      z-index: -1;
+    }
+    #ghostPink{
+      position: absolute;
+      clip: rect(80px, 470px, 95px, 455px);
+      top: 30px;
+      left:85px;
+      z-index: -1;
+    }
+    #ghostBlue{
+      position: absolute;
+      clip: rect(95px, 470px, 110px, 455px);
+      top: 15px;
+      left: 100px;
+      z-index: -1;
+    }
+    #ghostOrange{
+      position: absolute;
+      clip: rect(112px, 470px, 127px, 455px);
+      top:-2px;
+      left: 115px;
+      z-index: -1;
+    }
+    #frame{
+    height:248px;
+    width:225px;
+    position:absolute;
+    top:0px;
+    left: 450px;
+    }
+    #pacman {
+      position: absolute;
+      clip: rect(0, 470px, 15px, 455px);
+      top: 180px;
+      left: 100px;
+      animation: replace 2s;
     }
     #pacman1{
       position: absolute;
@@ -21,37 +56,4 @@
       left: 150px;
 
     }
-
-    #ghostRed{
-      position: absolute;
-      clip: rect(65px, 470px, 80px, 455px);
-      top:20px;
-      left:100px;
-    }
-    #ghostPink{
-      position: absolute;
-      clip: rect(80px, 470px, 95px, 455px);
-      top: 30px;
-      left:85px;
-    }
-    #ghostBlue{
-      position: absolute;
-      clip: rect(95px, 470px, 110px, 455px);
-      top: 15px;
-      left: 100px;
-      
-    }
-    #ghostOrange{
-      position: absolute;
-      clip: rect(112px, 470px, 127px, 455px);
-      top:-2px;
-      left: 115px;
-    }
-    #frame{
-    height:248px;
-    width:225px;
-    position:absolute;
-    top:0px;
-    left: 450px;
-    }
-    
+   
