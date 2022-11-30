@@ -1,43 +1,52 @@
-function move(keyEvent) {
-  let pacman = document.getElementById('pacman');
-  let x, y;
-  let step = 10;
-   if (x < 0) {
-    pacman.style.top = pacman.offsetLeft - 5 + "px";
-    pacman.style.left = x - step;
-  }
-  else {
-    pacman.style.top = pacman.offsetTop + 5 + "px";
-    pacman.style.left = x + step;
-  }
-  if (y < 0) {
-    pacman.style.top = pacman.offsetTop - 5 + "px";
-    pacman.style.top = y - step;
-  }
-  else {
-    pacman.style.top = pacman.offsetTop + 5 + "px";
-    pacman.style.top = y + step;
-  }
-  switch (e.key) {
-    case 'w': pacman.offsetTop + 5 + "px";break;
-    case 's': pacman.offsetTop - 5 + "px";break;
-    case 'a': pacman.offsetLeft - 5 + "px"; break;
-    case 'd': pacman.offsetLeft + 5 + "px";break;
-  }
-
-}
-
-
-function movePacman(pacman, x, y, step) {
-
-}
-function gameLoop() {
-  let pacman = document.getElementById('pacman');
+function move(top, left) {
+  change(pacmanIndex, pacman1Index)
+  const pacman = document.getElementById('pacman');
   let currTop = pacman.offsetTop;
   let currLeft = pacman.offsetLeft;
+  if (currLeft < 0) { pacman.style.left = 0; x = 0; }
+  if (currLeft > 100) { pacman.style.left = 100; x = 0; }
+  if (currTop < 0) { pacman.style.top = 0; y = 0; }
+  if (currTop > 100) { pacman.style.top = 100; y = 0; }
+
+
+
+  pacman.style.top = currTop + top + "px";
+  pacman.style.left = currLeft + left + "px";
+}
+
+document.addEventListener("keydown", e => {
+
+  switch (e.key) {
+    case 'w': x = -50; y = 0; break;
+    case 's': x = 50; y = 0; break;
+    case 'a': x = 0; y = -50; break;
+    case 'd': x = 0; y = 50; break;
+  }
+})
+
+function gameLoop() {
+  
+  move(x, y)
 
 }
-document.addEventListener('keydown', function (e) {
-  move(e.key);
+
+
+function change(pacmanIndex, pacman1Index) {
+  const pacman = document.getElementById('pacman');
+  const pacman1 = document.getElementById('pacman1');
+  let images = ['pacman', 'pacman1'];
+  let pacmanIndex = 0;
+  let pacman1Index = 1;
+  const imgElement = document.querySelector('pacman');
+  if (imgElement.src == pacman) {
+    imgElement.scr = pacmanIndex++;
+  }
+  else{
+    imgElement.scr = pacman1Index--;
+  }
 }
-)
+
+
+setInterval(gameLoop, 15)
+
+let x = 0, y = 0;
