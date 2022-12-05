@@ -6,54 +6,121 @@
       z-index: -1;
 
     }
-    #ghostRed{
+
+    #ghostRed {
       position: absolute;
       clip: rect(65px, 470px, 80px, 455px);
-      top:20px;
-      left:100px;
+      top: 20px;
+      left: 100px;
       z-index: 2;
     }
-    #ghostPink{
+
+    #ghostPink {
       position: absolute;
       clip: rect(80px, 470px, 95px, 455px);
       top: 30px;
-      left:85px;
+      left: 85px;
       z-index: 2;
     }
-    #ghostBlue{
+
+    #ghostBlue {
       position: absolute;
       clip: rect(95px, 470px, 110px, 455px);
       top: 15px;
       left: 100px;
       z-index: 2;
     }
-    #ghostOrange{
+
+    #ghostOrange {
       position: absolute;
       clip: rect(112px, 470px, 127px, 455px);
-      top:-2px;
+      top: -2px;
       left: 115px;
       z-index: 2;
     }
-    #frame{
-    height:248px;
-    width:225px;
-    position:absolute;
-    top:0px;
-    left: 450px;
-    }
-    #pacman {
+
+    #frame {
+      height: 248px;
+      width: 225px;
       position: absolute;
-      clip: rect(0, 470px, 15px, 455px);
+      top: 0px;
+      left: 450px;
+    }
+
+    #pacmanOpenedM {
+      position: absolute;
       top: 180px;
       left: 100px;
-      animation: replace 2s;
     }
-    #pacman1{
+
+    #pacmanClosedM {
       position: absolute;
       clip: rect(20px, 485px, 15px, 450px);
-      transition: all 50ms Fixed;
       top: 20px;
       left: 150px;
 
     }
-   
+
+    .pacman {
+      position: absolute;
+      clip: rect(0, 470px, 15px, 455px);
+      top: 0px;
+      left: 50%;
+      margin: auto;
+    }
+
+    .pacman img {
+      position: absolute;
+      left: -65px;
+      top: 0;
+      -webkit-animation-name: fade;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-duration: 6s;
+      animation-name: fade;
+      animation-iteration-count: infinite;
+      animation-duration: 6s;
+    }
+
+    @-webkit-keyframes fade {
+      0% {
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 1;
+      }
+
+      33% {
+        opacity: 1;
+      }
+
+      53% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 1;
+      }
+
+      33% {
+        opacity: 1;
+      }
+
+      53% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
