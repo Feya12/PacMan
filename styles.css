@@ -50,15 +50,21 @@
     #pacmanOpenedM {
       position: absolute;
       top: 180px;
-      left: 100px;
+      left: 50px;
     }
 
     #pacmanClosedM {
       position: absolute;
-      clip: rect(20px, 485px, 15px, 450px);
       top: 20px;
       left: 150px;
 
+    }
+    section {
+      position: relative;
+    }
+
+    section img {
+      position: absolute;
     }
 
     .pacman {
@@ -66,35 +72,23 @@
       clip: rect(0, 470px, 15px, 455px);
       top: 0px;
       left: 50%;
-      margin: auto;
-    }
-
-    .pacman img {
-      position: absolute;
-      left: -65px;
-      top: 0;
-      -webkit-animation-name: fade;
-      -webkit-animation-iteration-count: infinite;
-      -webkit-animation-duration: 6s;
       animation-name: fade;
+      animation-timing-function: ease-in-out;
       animation-iteration-count: infinite;
-      animation-duration: 6s;
+      animation-duration: 1s;
+      animation-direction: alternate;
     }
 
-    @-webkit-keyframes fade {
+    @keyframes fade {
       0% {
-        opacity: 0;
-      }
-
-      20% {
         opacity: 1;
       }
 
-      33% {
+      25% {
         opacity: 1;
       }
 
-      53% {
+      75% {
         opacity: 0;
       }
 
@@ -102,21 +96,27 @@
         opacity: 0;
       }
     }
-
-    @keyframes fade {
+    .pacman1 {
+      position: absolute;
+      clip: rect(20px, 445px, 15px, 420px);
+      top: 0px;
+      left: 50px;
+      animation-name: fade1;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-duration: 1s;
+      animation-direction: alternate;
+    }
+    @keyframes fade1 {
       0% {
-        opacity: 0;
-      }
-
-      20% {
         opacity: 1;
       }
 
-      33% {
+      25% {
         opacity: 1;
       }
 
-      53% {
+      75% {
         opacity: 0;
       }
 

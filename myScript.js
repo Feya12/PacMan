@@ -1,6 +1,6 @@
 function move(top, left) {
 
-  const pacman = document.getElementById("pacman");
+  const pacman = document.getElementById("pacmanClosedM");
 
   let currTop = pacman.offsetTop;
 
