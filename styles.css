@@ -1,3 +1,7 @@
+    body {
+      background-color: black;
+    }
+
     #mapWithDots {
       position: absolute;
       clip: rect(0, 225px, 270px, 0);
