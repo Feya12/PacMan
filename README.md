@@ -49,7 +49,7 @@ https://soft-madeleine-0e1900.netlify.app
   2.The PacMan leaves the labyrinth; How to fix it?;
   3.Make the move animation appear smoother.
   4.Heartbeat of each actor?
-  5.Make variables can be used in the whole code. (maybe global variablesma?)
+  5.Make variables can be used in the whole code. (maybe global variables?)
    - we have the main heartbeat
   *DONE:
   1.Made the move animation appear smoother.
