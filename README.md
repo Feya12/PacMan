@@ -48,10 +48,24 @@ https://soft-madeleine-0e1900.netlify.app
   1.Still the left and top movement are slower than the right and down;
   2.The PacMan leaves the labyrinth; How to fix it?;
   3.Make the move animation appear smoother.
-  4.Heartbeat of each actor?
+  4.Heartbeat of each actor? - we have the main heartbeat
   5.Make variables can be used in the whole code. (maybe global variables?)
-   - we have the main heartbeat
   *DONE:
   1.Made the move animation appear smoother.
   2.Made steps smaller.
+<<<<<<< HEAD
 >>>>>>> dc19d4a (Steps)
+=======
+
+
+  22 December
+  *TO DO:
+    1.Still the left and top movement are slower than the right and down;
+    2.The PacMan leaves the labyrinth; How to fix it?;
+  *DONE:
+  1.Labyrinth(some tries)
+  -made single function but it didn't work so decided to try things in move()
+  -tried to limit div movement with else()
+  -then decided to change if conditions, so that they will be in interval [] where wasd can move the pacman  
+  2.Have tried to declare global variables, saw how to do in w3schools, but it desn't work
+>>>>>>> 141714e (test)

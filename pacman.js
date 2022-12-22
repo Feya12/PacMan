@@ -14,11 +14,11 @@ function move(x, y) {
   document.getElementById("currLeft").innerHTML = currLeft;
 
   // Here the motion is controlled
-  if(x!=0&&currTop>-100||currTop<110){//x>-10&&x<100--> it means x belongs to [-10;100] interval (new way, according to status report)
+  if(x!=0){
     moving.style.top = currTop + x + "px";
   }
-  //else{moving.style.top = 0;} //try to limit the movement, not the right way
-  if(y!=0&&currLeft>-85||currLeft<120){//[-94;110]
+  //else{moving.style.top = 0;} try to limit the movement, not the right way
+  if(y!=0){
   moving.style.left = currLeft + y + "px";
   }
   //else{moving.style.left = 0;}

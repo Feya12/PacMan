@@ -1,7 +1,14 @@
+<<<<<<< HEAD
     body {
       background-color: black;
     }
 
+=======
+body {
+  background-color: black;
+}
+    
+>>>>>>> 141714e (test)
     #mapWithDots {
       position: absolute;
       clip: rect(0, 225px, 270px, 0);
