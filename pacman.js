@@ -1,10 +1,10 @@
-function move(x, y) { 
+function move(x, y) {
   // TODO
-  // This should be probably done only once in the beginning of the game. 
+  // This should be probably done only once in the beginning of the game.
   var moving = document.getElementById("moving");
   var currTop = moving.offsetTop;
   var currLeft = moving.offsetLeft;
-  
+
   //Status Report
   document.getElementById("status-x").innerHTML = x;
   document.getElementById("status-y").innerHTML = y;
@@ -15,22 +15,27 @@ function move(x, y) {
 
   // Here the motion is controlled
 
+  // To see why without the ifs pacman moves diagonally `interesting`
   if(x!=0){
     moving.style.top = currTop + x + "px";
   }
-  //else{moving.style.top = 0;} try to limit the movement, not the right way
-  if(y!=0){
+  // if(x!=0&&currTop>-100||currTop<110){//x>-10&&x<100--> it means x belongs to [-10;100] interval (new way, according to status report)
+  //   moving.style.top = currTop + x + "px";
+  // }
 
-  if(x!=0&&currTop>-100||currTop<110){//x>-10&&x<100--> it means x belongs to [-10;100] interval (new way, according to status report)
-    moving.style.top = currTop + x + "px";
-  }
-  //else{moving.style.top = 0;} //try to limit the movement, not the right way
-  if(y!=0&&currLeft>-85||currLeft<120){//[-94;110]
-  moving.style.left = currLeft + y + "px";
+
+  //else{moving.style.top = 0;} try to limit the movement, not the right way
+    //else{moving.style.top = 0;} //try to limit the movement, not the right way
+    // if(y!=0&&currLeft>-85||currLeft<120){//[-94;110]
+
+  // To see why without the ifs pacman moves diagonally `interesting`
+  if(y!=0){
+    moving.style.left = currLeft + y + "px";
   }
   //else{moving.style.left = 0;}
- }
-document.addEventListener("keydown", e => {
+}
+
+ document.addEventListener("keydown", e => {
 
   // Status Report
   document.getElementById("status-key").innerHTML = e.key;
@@ -48,7 +53,8 @@ document.addEventListener("keydown", e => {
   }
 })
 
-
+// TODO
+// In the beginning of the game x and y are not defined and there is an error in the browser console.
 function gameLoop() {
   move(x, y)
 }
@@ -59,11 +65,3 @@ function gameLoop() {
  *
  */
 setInterval(gameLoop, 150)
-
-
-
-
-
-
-
-
