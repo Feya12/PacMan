@@ -51,26 +51,30 @@
       left: 450px;
     }
 
-    #pacmanOpenedM {
-      position: absolute;
-    }
-
-
-    section {
+    #moving {
       position: relative;
     }
 
-    section img {
+    #pacman {
       position: absolute;
-    }
-
-    .pacman {
       clip: rect(0, 470px, 15px, 455px);
-      top: 125px;
-      left: 95px;
+      top: 0px;
+      left: 15px;
       animation-name: fade;
       animation-timing-function: ease-in-out;
       animation-iteration-count: infinite ;
+      animation-duration: 2s;
+      animation-direction: alternate;
+    }
+
+    #pacman1 {
+      position: absolute;
+      clip: rect(0, 487px, 15px, 470px);
+      top: 0px;
+      left: 0px;
+      animation-name: fade1;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
       animation-duration: 2s;
       animation-direction: alternate;
     }
@@ -91,29 +95,6 @@
       100% {
         opacity: 0;
       }
-    }
-
-    section {
-      position: relative;
-    }
-
-    section img {
-      position: absolute;
-    }
-
-    #pacmanClosedM {
-      position: absolute;
-    }
-
-    .pacman1 {
-      clip: rect(0, 487px, 15px, 470px);
-      top: 125px;
-      left: 80px;
-      animation-name: fade1;
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: infinite;
-      animation-duration: 2s;
-      animation-direction: alternate;
     }
 
     @keyframes fade1 {

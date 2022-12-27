@@ -1,9 +1,14 @@
 function move(x, y) {
+
   // TODO
   // This should be probably done only once in the beginning of the game.
-  var moving = document.getElementById("moving");
-  var currTop = moving.offsetTop;
+  var moving   = document.getElementById("moving");
+  var currTop  = moving.offsetTop;
   var currLeft = moving.offsetLeft;
+  // TODO
+  // See why this does not work.
+  // var currTop  = moving.style.top;
+  // var currLeft = moving.style.left;
 
   //Status Report
   document.getElementById("status-x").innerHTML = x;
@@ -17,7 +22,9 @@ function move(x, y) {
 
   // To see why without the ifs pacman moves diagonally `interesting`
   if(x!=0){
+    // moving.offsetTop cannot be used because offsetTop is read-only
     moving.style.top = currTop + x + "px";
+
   }
   // if(x!=0&&currTop>-100||currTop<110){//x>-10&&x<100--> it means x belongs to [-10;100] interval (new way, according to status report)
   //   moving.style.top = currTop + x + "px";
@@ -29,8 +36,10 @@ function move(x, y) {
     // if(y!=0&&currLeft>-85||currLeft<120){//[-94;110]
 
   // To see why without the ifs pacman moves diagonally `interesting`
+
   if(y!=0){
     moving.style.left = currLeft + y + "px";
+    // moving.offsetLeft = currLeft + y + "px";
   }
   //else{moving.style.left = 0;}
 }
@@ -44,11 +53,11 @@ function move(x, y) {
 
     case 'w': x = -10; y = 0; break;
 
-    case 's': x = 1; y = 0; break;//if s&d are smaller, can the steps be smoother?
+    case 's': x = 10;  y = 0; break;//if s&d are smaller, can the steps be smoother?
 
-    case 'a': x = 0; y = -10; break;
+    case 'a': x = 0;   y = -10; break;
 
-    case 'd': x = 0; y = 1; break;
+    case 'd': x = 0;   y = 10; break;
 
   }
 })
@@ -59,9 +68,17 @@ function gameLoop() {
   move(x, y)
 }
 
+function begin(){
+
+  var moving   = document.getElementById("moving");
+
+  moving.style.top = "50px";
+  moving.style.left = "50px";
+}
+
 /*
  *
  * This cycles the gameLoop and gives the main heartbeat, determining the overall game speed.
  *
  */
-setInterval(gameLoop, 150)
+setInterval(gameLoop, 150);

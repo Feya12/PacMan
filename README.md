@@ -22,13 +22,17 @@ https://soft-madeleine-0e1900.netlify.app
   * We demonstrated how one can keep a bulleted list w/ everything one does and this is the report at the end of the day, since 17 December 2022 `ff is doing it`
     * Write an article about this, since 17 December 2022 `dahoum`
   * You have committed stuff w/ conflicts, you cannot do that. If you cannot commit or push we should call `practice`
+  * We should name things consistently and group them as much as possible `watch`
+  * You should not have orphaned code (code which is not used) `watch`
 * Regression
   * The left and right movements are again diagonal (ff had tried to do something, we will examine it) `done`
+* Today
+  * Still the left and top movement are slower than the right and down `dahoum et ff`
+  * Cleaned up the CSS from repetitions `done`
 * Backlog
   * Make the move animation appear smoother.
     * Make the steps smaller and configurable.
   * The PacMan leaves the labyrinth
-  * Still the left and top movement are slower than the right and down `HOMEWORK`
   * TODOs
   * Heartbeat of each actor.
   * Make variables can be used in the whole code. (maybe global variables?)
