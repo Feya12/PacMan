@@ -21,23 +21,23 @@ function move(x, y) {
   // Here the motion is controlled
 
   // To see why without the ifs pacman moves diagonally `interesting`
-  if(x!=0){
+  if(x!=0&&currTop>-100||currTop<110){
     // moving.offsetTop cannot be used because offsetTop is read-only
     moving.style.top = currTop + x + "px";
 
   }
-  // if(x!=0&&currTop>-100||currTop<110){//x>-10&&x<100--> it means x belongs to [-10;100] interval (new way, according to status report)
+  // if(x!=0){//x>-10&&x<100--> it means x belongs to [-10;100] interval (new way, according to status report)
   //   moving.style.top = currTop + x + "px";
   // }
 
 
   //else{moving.style.top = 0;} try to limit the movement, not the right way
     //else{moving.style.top = 0;} //try to limit the movement, not the right way
-    // if(y!=0&&currLeft>-85||currLeft<120){//[-94;110]
+    // if(y!=0){//[-94;110]
 
   // To see why without the ifs pacman moves diagonally `interesting`
 
-  if(y!=0){
+  if(y!=0&&currLeft>-85||currLeft<120){
     moving.style.left = currLeft + y + "px";
     // moving.offsetLeft = currLeft + y + "px";
   }
@@ -72,8 +72,8 @@ function begin(){
 
   var moving   = document.getElementById("moving");
 
-  moving.style.top = "50px";
-  moving.style.left = "50px";
+  moving.style.top = "125px";
+  moving.style.left = "80px";
 }
 
 /*
