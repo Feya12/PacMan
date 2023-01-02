@@ -55,7 +55,7 @@ function move(x, y) {
 
     case 's': x = 10;  y = 0; break;//if s&d are smaller, can the steps be smoother?
 
-    // 5 1 + 9 = 3 (to the right) + 13 (to the right)
+    // 5 1 + 9 = 3 (to the right) + 13 (to the right) = 16 (to the right)
 
     // 10 2 + 18 = 2 x 10 = 20
 

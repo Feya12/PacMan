@@ -1,6 +1,6 @@
 # 2 January 2023
 
-11:45 CET ff et dahoum
+11:45 CET ff et gk et dahoum
 
 * Today
   * We figured out the mess w/ the two local repositories `done`
@@ -9,9 +9,7 @@
   * We learned Netlify deploy w/ git push `done`
   * We did clean clone from your own repostory `done`
   * Still the left and top movement are slower than the right and down `dahoum et ff`
-    * In the slow direction the change is 2
-    * In the fast direction the change is 18
-    * The sum is 20
+    * We tried 5, 10 and 20; 5 behaves very weirdly `homework`
 * Backlog
   * Make the move animation appear smoother.
     * Make the steps smaller and configurable.
