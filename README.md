@@ -1,16 +1,22 @@
-# PacMan w/ ff
+# 2 January 2023
 
-## Netlify
-
-https://soft-madeleine-0e1900.netlify.app
-
-## What is special about ff
-
-* Has done the animation w/ CSS.
+* Today
+  * We figured out the mess w/ the two local repositories `done`
+  * We moved her repository to her GitHub `done`
+  * We cleaned up Netlify and connected it to her GitHub `done`
+  * We learned Netlify deploy w/ git push `done`
+  * We did clean clone from your own repostory `done`
+* Feya's Features
+  * Very observant (notices all mistake I make on shared screen)
+* Feya's Implementation Specifics
   * JavaScript has more capabilities for animation thatn CSS.
   * However it is good to know both.
   * So we will leave some animation to be done w/ CSS such as the mouth animaiton movements.
     * We will need a bit of JavaScript, because when PacMan stops, the mouth stops in open state.
+* Infrastructure
+  * GitHub
+  * Netlify
+    * https://ffpacman.netlify.app
 
 ## 27 December 2022
 
