@@ -81,4 +81,4 @@ function begin(){
  * This cycles the gameLoop and gives the main heartbeat, determining the overall game speed.
  *
  */
-setInterval(gameLoop, 150);
+setInterval(gameLoop, 40);
