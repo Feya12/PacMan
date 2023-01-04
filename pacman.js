@@ -41,9 +41,15 @@ function move(x, y) {
 
     case 's': x = 10;  y = 0; break;
 
-    case 'a': x = 0;   y = -10; break;
+    // 5 1 + 9 = 3 (to the right) + 13 (to the right) = 16 (to the right)
 
-    case 'd': x = 0;   y = 10; break;
+    // 10 2 + 18 = 2 x 10 = 20
+
+    // 20 12 + 28 = 2 x 20 = 40
+
+    case 'a': x = 0;   y = -5; break;
+
+    case 'd': x = 0;   y = 5; break;
 
   }
 })
