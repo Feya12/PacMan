@@ -5,10 +5,6 @@ function move(x, y) {
   var moving   = document.getElementById("moving");
   var currTop  = moving.offsetTop;
   var currLeft = moving.offsetLeft;
-  // TODO
-  // See why this does not work.
-  // var currTop  = moving.style.top;
-  // var currLeft = moving.style.left;
 
   //Status Report
   document.getElementById("status-x").innerHTML = x;
@@ -19,29 +15,19 @@ function move(x, y) {
   document.getElementById("currLeft").innerHTML = currLeft;
 
   // Here the motion is controlled
-
-  // To see why without the ifs pacman moves diagonally `interesting`
-  if(x!=0&&currTop>-100||currTop<110){
-    // moving.offsetTop cannot be used because offsetTop is read-only
+  if(x!=0&&moving.style.top>-150||moving.style.top<210){
     moving.style.top = currTop + x + "px";
-
   }
-  // if(x!=0){//x>-10&&x<100--> it means x belongs to [-10;100] interval (new way, according to status report)
-  //   moving.style.top = currTop + x + "px";
-  // }
+  else{
+    moving.style.top=0;
+  }
 
-
-  //else{moving.style.top = 0;} try to limit the movement, not the right way
-    //else{moving.style.top = 0;} //try to limit the movement, not the right way
-    // if(y!=0){//[-94;110]
-
-  // To see why without the ifs pacman moves diagonally `interesting`
-
-  if(y!=0&&currLeft>-85||currLeft<120){
+  if(y!=0&&moving.style.left>-55||moving.style.left<320){
     moving.style.left = currLeft + y + "px";
-    // moving.offsetLeft = currLeft + y + "px";
   }
-  //else{moving.style.left = 0;}
+  else{
+    moving.style.left = 0;
+  }
 }
 
  document.addEventListener("keydown", e => {
@@ -53,7 +39,7 @@ function move(x, y) {
 
     case 'w': x = -10; y = 0; break;
 
-    case 's': x = 10;  y = 0; break;//if s&d are smaller, can the steps be smoother?
+    case 's': x = 10;  y = 0; break;
 
     case 'a': x = 0;   y = -10; break;
 
@@ -71,9 +57,8 @@ function gameLoop() {
 function begin(){
 
   var moving   = document.getElementById("moving");
-
-  moving.style.top = "125px";
-  moving.style.left = "80px";
+  moving.style.top = "130px";
+  moving.style.left = "85px";
 }
 
 /*
