@@ -5,6 +5,8 @@ function move(x, y) {
   var moving   = document.getElementById("moving");
   var currTop  = moving.offsetTop;
   var currLeft = moving.offsetLeft;
+  //var width = moving.style.width;
+  //var currRight = currLeft - width;
 
   //Status Report
   document.getElementById("status-x").innerHTML = x;
@@ -15,19 +17,32 @@ function move(x, y) {
   document.getElementById("currLeft").innerHTML = currLeft;
 
   // Here the motion is controlled
-  if(x!=0&&(currTop>0||currTop<230)){
+  if(x!=0){
     moving.style.top = currTop + x + "px";
   }
-  else{
-    // moving.style.top="130px";
-  }
 
-  if(y!=0&&(currLeft>-15||currLeft<185)){
+  if(y!=0){
     moving.style.left = currLeft + y + "px";
   }
-  else{
-    // moving.style.left = "85px";
+  
+  if(currTop==130&&currLeft==116){
+    moving.style.left=currLeft - 1 + "px";
   }
+  if(currTop==155&&currLeft==115){
+    moving.style.top=currTop - 1 + "px";
+  }
+  if(currLeft==183&&currTop==155){
+    moving.style.left=currLeft - 1 + "px";
+  }
+  
+  /*if(currTop==130&&currRight==50){
+    moving.style.right=currRight - 1 + "px";
+  }
+
+  /*if(currLeft==115&&moving.style.top==130){
+    moving.style.left = currLeft - 1 + "px";
+    moving.style.top = currTop - 1 + "px";  
+  }*/
 }
 
  document.addEventListener("keydown", e => {
@@ -37,13 +52,13 @@ function move(x, y) {
 
   switch (e.key) {
 
-    case 'w': x = -10; y = 0; break;
+    case 'w': x = -1; y = 0; break;
 
-    case 's': x = 10;  y = 0; break;
+    case 's': x = 1;  y = 0; break;
 
-    case 'a': x = 0;   y = -10; break;
+    case 'a': x = 0;   y = -1; break;
 
-    case 'd': x = 0;   y = 10; break;
+    case 'd': x = 0;   y = 1; break;
 
   }
 })
@@ -66,4 +81,4 @@ function begin(){
  * This cycles the gameLoop and gives the main heartbeat, determining the overall game speed.
  *
  */
-setInterval(gameLoop, 200);
+setInterval(gameLoop, 50);
