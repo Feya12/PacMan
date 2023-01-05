@@ -19,14 +19,14 @@ function move(x, y) {
     moving.style.top = currTop + x + "px";
   }
   else{
-    moving.style.top="130px";
+    // moving.style.top="130px";
   }
 
   if(y!=0&&(currLeft>-15||currLeft<185)){
     moving.style.left = currLeft + y + "px";
   }
   else{
-    moving.style.left = "85px";
+    // moving.style.left = "85px";
   }
 }
 
