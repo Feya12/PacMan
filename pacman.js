@@ -35,10 +35,10 @@ function move(x, y) {
     moving.style.left=currLeft - 1 + "px";
   }
   
-  /*if(currTop==130&&currRight==50){
+  if(currTop==110&&currRight==187){
     moving.style.right=currRight - 1 + "px";
   }
-
+/*
   /*if(currLeft==115&&moving.style.top==130){
     moving.style.left = currLeft - 1 + "px";
     moving.style.top = currTop - 1 + "px";  
