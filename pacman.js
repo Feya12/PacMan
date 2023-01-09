@@ -5,8 +5,8 @@ function move(x, y) {
   var moving   = document.getElementById("moving");
   var currTop  = moving.offsetTop;
   var currLeft = moving.offsetLeft;
-  //var width = moving.style.width;
-  //var currRight = currLeft - width;
+  var width = moving.style.width;
+  var currRight = currLeft - width;
 
   //Status Report
   document.getElementById("status-x").innerHTML = x;
@@ -35,8 +35,9 @@ function move(x, y) {
     moving.style.left=currLeft - 1 + "px";
   }
   
-  if(currTop==110&&currRight==187){
-    moving.style.right=currRight - 1 + "px";
+  if(currTop==130&&currRight==45){
+    //alert("Hi!");
+    moving.style.left=currRight - 1 + "px";
   }
 /*
   /*if(currLeft==115&&moving.style.top==130){
