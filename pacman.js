@@ -1,4 +1,4 @@
-function move(x, y, stop) {
+function move(x, y) {
 
   // TODO
   // This should be probably done only once in the beginning of the game.
@@ -18,24 +18,20 @@ function move(x, y, stop) {
   document.getElementById("currLeft").innerHTML = currLeft;
 
   // Here the motion is controlled
-  if(stop == false){
+  
+  //var stop1 = true;
+  if((currTop==130&&currLeft==116)||(currTop==130&&currRight==45)){
+      stop = true;
+  }
+  else{
     if(x!=0){
       moving.style.top = currTop + x + "px";
     }
-
     if(y!=0){
       moving.style.left = currLeft + y + "px";
     }
   }
 
-  if(currTop==130&&currLeft==116){
-    stop = true;
-  }else if(currTop==130&&currRight==45){
-    stop = true;
-  }else{
-    stop = false;
-  }
-  
 }
 
  document.addEventListener("keydown", e => {
@@ -60,7 +56,7 @@ function move(x, y, stop) {
 // In the beginning of the game x and y are not defined and there is an error in the browser console.
 function gameLoop() {
   var stop = false;
-  move(x, y, stop)
+  move(x, y)
 }
 
 function begin(){
@@ -75,4 +71,4 @@ function begin(){
  * This cycles the gameLoop and gives the main heartbeat, determining the overall game speed.
  *
  */
-setInterval(gameLoop, 50);
+setInterval(gameLoop, 50)
