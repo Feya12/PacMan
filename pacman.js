@@ -1,4 +1,4 @@
-function move(x, y) {
+function move(x, y, stop) {
 
   // TODO
   // This should be probably done only once in the beginning of the game.
@@ -7,6 +7,7 @@ function move(x, y) {
   var currLeft = moving.offsetLeft;
   var width = moving.style.width;
   var currRight = currLeft - width;
+  
 
   //Status Report
   document.getElementById("status-x").innerHTML = x;
@@ -17,33 +18,24 @@ function move(x, y) {
   document.getElementById("currLeft").innerHTML = currLeft;
 
   // Here the motion is controlled
-  if(x!=0){
-    moving.style.top = currTop + x + "px";
+  if(stop == false){
+    if(x!=0){
+      moving.style.top = currTop + x + "px";
+    }
+
+    if(y!=0){
+      moving.style.left = currLeft + y + "px";
+    }
   }
 
-  if(y!=0){
-    moving.style.left = currLeft + y + "px";
-  }
-  
   if(currTop==130&&currLeft==116){
-    moving.style.left=currLeft - 1 + "px";
-  }
-  if(currTop==155&&currLeft==115){
-    moving.style.top=currTop - 1 + "px";
-  }
-  if(currLeft==183&&currTop==155){
-    moving.style.left=currLeft - 1 + "px";
+    stop = true;
+  }else if(currTop==130&&currRight==45){
+    stop = true;
+  }else{
+    stop = false;
   }
   
-  if(currTop==130&&currRight==45){
-    //alert("Hi!");
-    moving.style.left=currRight - 1 + "px";
-  }
-/*
-  /*if(currLeft==115&&moving.style.top==130){
-    moving.style.left = currLeft - 1 + "px";
-    moving.style.top = currTop - 1 + "px";  
-  }*/
 }
 
  document.addEventListener("keydown", e => {
@@ -67,7 +59,8 @@ function move(x, y) {
 // TODO
 // In the beginning of the game x and y are not defined and there is an error in the browser console.
 function gameLoop() {
-  move(x, y)
+  var stop = false;
+  move(x, y, stop)
 }
 
 function begin(){
