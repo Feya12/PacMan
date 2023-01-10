@@ -4,6 +4,15 @@
 * +10 makes it "stop" `done`
 * We changed the stop logic with a stop variable `done`
 
+* TO DO:
+   * Need to make the logic of the movement with boolean variable `ff`
+   * Revise what does bool mean `ff` `done` 
+   * https://www.w3schools.com/js/js_booleans.asp
+   * Found out that boolean can be an object, not only a variable, but in     this way, code runs slowly, so we do not need it `ff` 
+*  Tried to:
+   * make do while loop with the exact moving, but it does not work
+   * declare second bool, which is used for the borders of the moving, but it does not work   
+
 # 5 January 2023
 
 * 3 January 2023 we did not call.
