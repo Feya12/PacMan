@@ -1,6 +1,8 @@
 # 11 January 2023
 
-
+* Yesterday we made the logic of the left stop to work `done`
+* +10 makes it "stop" `done`
+* We changed the stop logic with a stop variable `done`
 
 # 5 January 2023
 
