@@ -40,14 +40,14 @@ function move(x, y) {
   document.getElementById("status-key").innerHTML = e.key;
 
   switch (e.key) {
+ 
+    case "ArrowLeft": x = 0;   y = -1; break;//left
 
-    case 'w': x = -1; y = 0; break;
+    case "ArrowUp": x = -1; y = 0; break;//up
 
-    case 's': x = 1;  y = 0; break;
+    case "ArrowDown": x = 1;  y = 0; break;//right
 
-    case 'a': x = 0;   y = -1; break;
-
-    case 'd': x = 0;   y = 1; break;
+    case "ArrowRight": x = 0;   y = 1; break;//down
 
   }
 })
