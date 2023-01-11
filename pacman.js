@@ -20,18 +20,20 @@ function move(x, y) {
   // Here the motion is controlled
   
   //var stop1 = true;
-  if((currTop==130&&currLeft==116)||(currTop==130&&currRight==45)){
-      stop = true;
-  }
-  else{
+  //if(stop == false){
     if(x!=0){
       moving.style.top = currTop + x + "px";
     }
     if(y!=0){
       moving.style.left = currLeft + y + "px";
     }
-  }
-
+  //}
+  /*else{
+   if((currTop==130&&currLeft==116)||(currTop==130&&currRight==45)){
+    stop = true;
+   }
+  }*/
+//()|
 }
 
  document.addEventListener("keydown", e => {

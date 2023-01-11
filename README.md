@@ -1,5 +1,20 @@
 # 11 January 2023
 
+* Work from the office today 
+* TO DO:
+   * Need to revise all knowledge for ifs `ff` `done`
+   * https://www.w3schools.com/js/js_switch.asp
+   * Have to change 'w', 'a', 's', 'd' cases in the switch with the keyboard arrows `ff` `done`
+   * https://www.codespeedy.com/detect-arrow-key-press-in-javascript/
+   * https://www.includehelp.com/code-snippets/move-object-with-arrow-keys-using-javascript-function.aspx
+     * Left arrow key has the key code 37, up arrow key has code 38, the right key has the code 39 and the down arrow key has the key code 40. 
+     * There are 3 possible events (keydown, keypress, or keyup) that are triggered when a user interacts with the keyboard.
+     * If you want to use for example ArrowRight , as a case, you need " ", not ' '
+   * After the arrow keys, I noticed that if I press ArrowRight/ArrowLeft, the Pacman moves but the horizontal scroll is on too so it scrolls too.   And I decided to stop it because I think that we do not need it. `ff` `done`
+    * https://stackoverflow.com/questions/17756649/disable-the-horizontal-scroll
+
+# 10 January 2023
+
 * Yesterday we made the logic of the left stop to work `done`
 * +10 makes it "stop" `done`
 * We changed the stop logic with a stop variable `done`
