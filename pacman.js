@@ -34,6 +34,11 @@ function move(x, y) {
    }
   }*/
 //()|
+
+  var Arr = [
+    [130/*CurrTop*/, 45/*CurrRight*/, ArrowUp, ArrowDown, ArrowRight],
+    [130, 116/*currLeft*/, ArrowUp, ArrowDown, ArrowDown]
+  ]
 }
 
  document.addEventListener("keydown", e => {
@@ -67,6 +72,7 @@ function begin(){
   moving.style.top = "130px";
   moving.style.left = "85px";
 }
+
 
 /*
  *
