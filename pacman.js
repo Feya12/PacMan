@@ -20,25 +20,24 @@ function move(x, y) {
   // Here the motion is controlled
   
   //var stop1 = true;
-  //if(stop == false){
+  //if(stop == false){ 
+    var arr = [
+    [130/*CurrTop*/, 45/*CurrRight*/, ArrowUp, ArrowDown, ArrowRight],
+    [130, 116/*currLeft*/, ArrowUp, ArrowDown, ArrowDown]
+  ]
+  
     if(x!=0){
       moving.style.top = currTop + x + "px";
     }
     if(y!=0){
       moving.style.left = currLeft + y + "px";
-    }
-  //}
-  /*else{
-   if((currTop==130&&currLeft==116)||(currTop==130&&currRight==45)){
-    stop = true;
+    } 
+    if((currTop==arr[0][0]&&currLeft==arr[0][1])){
+    moving.style.left = currLeft - 1 + "px";
    }
-  }*/
-//()|
+//||(currTop==130&&currRight==45)
+//arr[0][0] wzimame samo pyrwiq element na purwiq podmasiv
 
-  var Arr = [
-    [130/*CurrTop*/, 45/*CurrRight*/, ArrowUp, ArrowDown, ArrowRight],
-    [130, 116/*currLeft*/, ArrowUp, ArrowDown, ArrowDown]
-  ]
 }
 
  document.addEventListener("keydown", e => {
@@ -62,7 +61,7 @@ function move(x, y) {
 // TODO
 // In the beginning of the game x and y are not defined and there is an error in the browser console.
 function gameLoop() {
-  var stop = false;
+  //var stop = false;
   move(x, y)
 }
 
