@@ -23,7 +23,7 @@ function move(x, y) {
   //if(stop == false){ 
     var arr = [
     [130, 45, ArrowUp, ArrowDown, ArrowRight],
-    [130, 116/*currLeft*/, ArrowUp, ArrowDown, ArrowDown]
+    [130, 116, ArrowUp, ArrowDown, ArrowDown]
   ]
   
     if(x!=0){
