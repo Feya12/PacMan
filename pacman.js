@@ -1,13 +1,24 @@
 function move(x, y) {
-
+ 
   // TODO
   // This should be probably done only once in the beginning of the game.
   var moving   = document.getElementById("moving");
   var currTop  = moving.offsetTop;
   var currLeft = moving.offsetLeft;
+  var height = moving.style.height;
   var width = moving.style.width;
   var currRight = currLeft - width;
-  
+  var currDown = currTop - height;
+  var arr = [
+    //currTop,currLeft
+    [130, 116, ArrowUp, ArrowDown, ArrowRight],
+    [130, 45, ArrowUp, ArrowDown, ArrowLeft],
+    [90, 115, ArrowDown, ArrowRight]
+  ];
+  var ArrowUp = moving.style.top;
+  var ArrowDown = moving.style.top - height;
+  var ArrowLeft = moving.style.left;
+  var ArrowRight = moving.style.left - width;
 
   //Status Report
   document.getElementById("status-x").innerHTML = x;
@@ -21,10 +32,7 @@ function move(x, y) {
   
   //var stop1 = true;
   //if(stop == false){ 
-    var arr = [
-    [130, 45, ArrowUp, ArrowDown, ArrowRight],
-    [130, 116, ArrowUp, ArrowDown, ArrowDown]
-  ]
+    /**/
   
     if(x!=0){
       moving.style.top = currTop + x + "px";
@@ -32,11 +40,16 @@ function move(x, y) {
     if(y!=0){
       moving.style.left = currLeft + y + "px";
     } 
-    if((currTop==arr[0][0]&&currLeft==arr[0][1])){
+    if(currTop==arr[0][0]&&currLeft==arr[0][1]){
     moving.style.left = currLeft - 1 + "px";
    }
-//||(currTop==130&&currRight==45)
-//arr[0][0] wzimame samo pyrwiq element na purwiq podmasiv
+    if(currTop==arr[1][0]&&currLeft==arr[1][1]){
+      moving.style.left = currRight- 1 + "px";
+      //alert("Hi!");
+   }
+   if(currDown==arr[2][0]&&currLeft==arr[2][1]){
+    moving.style.top = currDown - 1 + "px";
+   }
 
 }
 
@@ -58,15 +71,12 @@ function move(x, y) {
   }
 })
 
-// TODO
-// In the beginning of the game x and y are not defined and there is an error in the browser console.
 function gameLoop() {
   //var stop = false;
   move(x, y)
 }
 
 function begin(){
-
   var moving   = document.getElementById("moving");
   moving.style.top = "130px";
   moving.style.left = "85px";
@@ -79,3 +89,4 @@ function begin(){
  *
  */
 setInterval(gameLoop, 50)
+let x = 0, y = 0;
