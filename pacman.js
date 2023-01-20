@@ -30,9 +30,8 @@ function move(x, y) {
 
   // Here the motion is controlled
   
-  //var stop1 = true;
-  //if(stop == false){ 
-    /**/
+     var stop;
+     Boolean(stop);
   
     if(x!=0){
       moving.style.top = currTop + x + "px";
