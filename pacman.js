@@ -12,7 +12,7 @@ function move(x, y) {
   var arr = [
     //currTop,currLeft
     [130, 116, ArrowUp, ArrowDown, ArrowRight],
-    [130, 45, ArrowUp, ArrowDown, ArrowLeft],
+    [130, 50, ArrowUp, ArrowDown, ArrowLeft],
     [90, 115, ArrowDown, ArrowRight]
   ];
   var ArrowUp = moving.style.top;
@@ -41,14 +41,14 @@ function move(x, y) {
       moving.style.left = currLeft + y + "px";
     } 
     if(currTop==arr[0][0]&&currLeft==arr[0][1]){
-    moving.style.left = currLeft - 1 + "px";
+      moving.style.left = currLeft - 1 + "px";
    }
     if(currTop==arr[1][0]&&currLeft==arr[1][1]){
-      moving.style.left = currRight- 1 + "px";
+      moving.style.left = currLeft + 1 + "px";
       //alert("Hi!");
    }
-   if(currDown==arr[2][0]&&currLeft==arr[2][1]){
-    moving.style.top = currDown - 1 + "px";
+    if(currDown==arr[2][0]&&currLeft==arr[2][1]){
+      moving.style.top = currTop + 1 + "px";
    }
 
 }
