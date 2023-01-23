@@ -1,16 +1,19 @@
-function thruAnArray(){
+function display(str) {
+    $('#msgs').append($('<div>').text(str));
+}
+
+//function thruAnArray(){
     var arr = [
         //currTop,currLeft
-        [130, 116, ArrowUp, ArrowDown, ArrowRight],
-        [130, 50, ArrowUp, ArrowDown, ArrowLeft],
-        [90, 115, ArrowDown, ArrowRight]
+        [130, 116],//ArrowUp, ArrowDown, ArrowRight],
+        [130, 50], // ArrowUp, ArrowDown, ArrowLeft],
+        [90, 115]// ArrowDown, ArrowRight]
       ];
-
-    let i = 0;
-
-    while (i < arr.length) {
-        console.log(scores[i]);
-        i++;
-    }
-
-}
+       
+    for(var i = 0; i < arr.length; i++) {
+           var element = arr[i];
+           for(var j = 0; j < element.length; j++) {
+               display("element[" + i + "][" + j + "] = " + element[j]);
+           }
+       }
+//}
