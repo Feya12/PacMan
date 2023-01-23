@@ -11,9 +11,10 @@ function move(x, y) {
   var currDown = currTop - height;
   var arr = [
     //currTop,currLeft
-    [130, 116, ArrowUp, ArrowDown, ArrowRight],
-    [130, 50, ArrowUp, ArrowDown, ArrowLeft],
-    [90, 115, ArrowDown, ArrowRight]
+    [150, 116, ArrowUp, ArrowDown, ArrowRight],
+    [150, 50, ArrowUp, ArrowDown, ArrowLeft],
+    [85, 114, ArrowDown, ArrowRight],
+    [145, 116, ArrowUp, ArrowLeft, ArrowRight]
   ];
   var ArrowUp = moving.style.top;
   var ArrowDown = moving.style.top - height;
@@ -30,8 +31,8 @@ function move(x, y) {
 
   // Here the motion is controlled
   
-     var stop;
-     Boolean(stop);
+     //var stop;
+     //Boolean(stop);
   
     if(x!=0){
       moving.style.top = currTop + x + "px";
@@ -39,16 +40,26 @@ function move(x, y) {
     if(y!=0){
       moving.style.left = currLeft + y + "px";
     } 
-    if(currTop==arr[0][0]&&currLeft==arr[0][1]){
-      moving.style.left = currLeft - 1 + "px";
-   }
-    if(currTop==arr[1][0]&&currLeft==arr[1][1]){
-      moving.style.left = currLeft + 1 + "px";
-      //alert("Hi!");
-   }
-    if(currDown==arr[2][0]&&currLeft==arr[2][1]){
-      moving.style.top = currTop + 1 + "px";
-   }
+
+    for(var i = 0; i < arr.length; i++) {
+      var element = arr[i];
+      for(var j = 0; j < element.length; j++) {   
+        if(currTop==arr[i][0]){
+          moving.style.top = currTop + 1 + "px";
+        }
+        if(currTop==arr[i][0]){
+          moving.style.top = currTop - 1 + "px";
+        }
+        if(currLeft==arr[i][1]){
+          moving.style.left = currLeft - 1 + "px";
+        }
+        /*else if(currRight==arr[i][1]){
+          moving.style.left = currLeft + 1 + "px";
+        }*/
+    }
+}
+
+ 
 
 }
 

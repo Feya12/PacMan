@@ -1,5 +1,6 @@
 function display(str) {
-    $('#msgs').append($('<div>').text(str));
+    //var pacman = document.display("pacman1.png")
+    $('#fe').append($('<div>').text(str));
 }
 
 //function thruAnArray(){
@@ -13,7 +14,8 @@ function display(str) {
     for(var i = 0; i < arr.length; i++) {
            var element = arr[i];
            for(var j = 0; j < element.length; j++) {
-               display("element[" + i + "][" + j + "] = " + element[j]);
+               //alert("element[" + i + "][" + j + "] = " + element[j]);
+            document.write(" element[" + i + "][" + j + "] = " + element[j] + "<br>" );
            }
        }
 //}

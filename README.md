@@ -1,8 +1,14 @@
 # 23 January 2023
 
-* How to make a loop which itterates all the elements in 2 dimensional array?
-  * https://www.freecodecamp.org/news/how-to-loop-through-an-array-in-javascript-js-iterate-tutorial/
-  * https://stackoverflow.com/questions/10021847/for-loop-in-multidimensional-javascript-array
+* TO DO: 
+  * How to make a loop which itterates all the elements in 2 dimensional array? `ff` `done`
+    * https://www.freecodecamp.org/news/how-to-loop-through-an-array-in-javascript-js-iterate-tutorial/
+    * https://stackoverflow.com/questions/10021847/for-loop-in-multidimensional-javascript-array
+  * Find what to use to display every itterated element from the array on the screen `ff` `done`
+    * https://www.w3schools.com/js/js_output.asp 
+    * Using `document.write("")` 
+  * How to display every element on the next line? `ff` `done`
+    * https://www.baeldung.com/java-string-newline
 
 # 18 January 2023
 
