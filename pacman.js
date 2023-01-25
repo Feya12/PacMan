@@ -8,7 +8,7 @@ function move(x, y) {
   var height = moving.style.height;
   var width = moving.style.width;
   var currRight = currLeft - width;
-  var currDown = currTop - height;
+  var currDown = currTop + height;
   var arr = [
     //currTop,currLeft
     [150, 116, ArrowUp, ArrowDown, ArrowRight],
@@ -16,8 +16,8 @@ function move(x, y) {
     [85, 114, ArrowDown, ArrowRight],
     [145, 116, ArrowUp, ArrowLeft, ArrowRight]
   ];
-  var ArrowUp = moving.style.top;
-  var ArrowDown = moving.style.top - height;
+  var ArrowUp = moving.style.top - height;
+  var ArrowDown = moving.style.top;
   var ArrowLeft = moving.style.left;
   var ArrowRight = moving.style.left - width;
 
@@ -33,23 +33,24 @@ function move(x, y) {
   
      //var stop;
      //Boolean(stop);
-  
+  //var stop = false;
     if(x!=0){
       moving.style.top = currTop + x + "px";
     }
     if(y!=0){
       moving.style.left = currLeft + y + "px";
     } 
-
     for(var i = 0; i < arr.length; i++) {
       var element = arr[i];
       for(var j = 0; j < element.length; j++) {   
         if(currTop==arr[i][0]){
+         moving.style.top = currTop - 1 + "px";
+         //break;
+        } 
+        if(currDown==arr[i][0]){
           moving.style.top = currTop + 1 + "px";
-        }
-        if(currTop==arr[i][0]){
-          moving.style.top = currTop - 1 + "px";
-        }
+          //break;
+        } 
         if(currLeft==arr[i][1]){
           moving.style.left = currLeft - 1 + "px";
         }
@@ -57,10 +58,7 @@ function move(x, y) {
           moving.style.left = currLeft + 1 + "px";
         }*/
     }
-}
-
- 
-
+   } 
 }
 
  document.addEventListener("keydown", e => {
