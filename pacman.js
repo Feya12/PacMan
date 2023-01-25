@@ -34,7 +34,7 @@ function move(x, y) {
   // Here the motion is controlled
 
   // Move
-  if((x !=0 ) && (PacManStop == "false")){
+  if(x!=0){
     moving.style.top = currTop + x + "px";
   }
   // Move
@@ -71,6 +71,13 @@ function move(x, y) {
   document.getElementById("status-key").innerHTML = e.key;
 
   switch (e.key) {
+
+    case
+      "ArrowLeft": x = 0;
+      y = -1;
+      // Here we un-stop the PacMan in case it is stopped against a wall
+      window.localStorage.setItem("PacManStop", "false");
+      break;//left
 
       case
       "ArrowLeft": x = 0;
@@ -112,6 +119,7 @@ function begin(){
   moving.style.left = "85px";
   // localStorage can only save a string at the moment
   window.localStorage.setItem("PacManStop", "false");
+
 }
 
 
