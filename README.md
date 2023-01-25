@@ -12,3 +12,5 @@
 * Homework
   * Try to understand the better way of stopping we did.
   * Try to implement it for the other directions.
+
+ * I have made big mistake with commits again. 
