@@ -14,11 +14,11 @@ function move(x, y) {
   // Software Model of the Labyrinth
   // Helps us when we need to stop at a wall and turn at a crossing
   var arr = [
-    //currTop,currLeft
+    //currTop,currLeft                         //coordinates to the:
     [130, 116, ArrowUp, ArrowDown, ArrowRight],//first wall right
     [130, 50, ArrowUp, ArrowDown, ArrowLeft],//first wall left
-    [85, 117, ArrowDown, ArrowRight],
-    [145, 116, ArrowUp, ArrowLeft, ArrowRight]
+    [87, 117, ArrowDown, ArrowRight],//wall right from the red ghost
+    [49, 87, ArrowUp, ArrowLeft, ArrowRight]//wall left from the red ghosy
   ];
   var ArrowUp = moving.style.top - height;
   var ArrowDown = moving.style.top;
@@ -38,24 +38,22 @@ function move(x, y) {
     moving.style.top = currTop + x + "px";
   }
   // Move
-  if((y !=0 ) && (PacManStop == "false")){
+  if((y!=0) && (PacManStop == "false")){
     moving.style.left = currLeft + y + "px";
-  }else{
+  }
   // Stop
   for(var i = 0; i < arr.length; i++) {
     var element = arr[i];
     for(var j = 0; j < element.length; j++) {
       if(currTop==arr[i][0]){
-        window.localStorage.setItem("PacManStop", "true");
+        window.localStorage.setItem("StopPacMan", "true");
       }
       // WE ARE HERE
       if(currLeft==arr[i][1]){
         window.localStorage.setItem("PacManStop", "true");
       }
     }
-   }
-  }
-  
+   }  
 }
 
  document.addEventListener("keydown", e => {
@@ -65,43 +63,31 @@ function move(x, y) {
 
   switch (e.key) {
 
-    case
-      "ArrowLeft": x = 0;
+    case "ArrowLeft": x = 0;
       y = -1;
       // Here we un-stop the PacMan in case it is stopped against a wall
       window.localStorage.setItem("PacManStop", "false");
       break;//left
 
-      case
-      "ArrowLeft": x = 0;
-          y = -1;
-          // Here we un-stop the PacMan in case it is stopped against a wall
-          window.localStorage.setItem("PacManStop", "false");
-        break;//left
+    case "ArrowUp": x = -1; 
+        y = 0;
+        window.localStorage.setItem("PacManStop", "false");
+        break;//up
 
-      case 
-      "ArrowUp": x = -1; 
-          y = 0;
-          window.localStorage.setItem("PacManStop", "false");
-          break;//up
+    case "ArrowDown": x = 1; 
+        y = 0; 
+        window.localStorage.setItem("PacManStop", "false"); 
+        break;//down
 
-      case 
-      "ArrowDown": x = 1; 
-          y = 0; 
-          window.localStorage.setItem("PacManStop", "false"); 
-          break;//down
-
-      case 
-      "ArrowRight": x = 0;  
-          y = 1;
-          window.localStorage.setItem("PacManStop", "false"); 
-          break;//right
+    case "ArrowRight": x = 0;  
+        y = 1;
+        window.localStorage.setItem("PacManStop", "false"); 
+        break;//right
 
   }
 })
 
 function gameLoop() {
-  //var stop = false;
   move(x, y)
 }
 
@@ -121,6 +107,6 @@ function begin(){
  * This cycles the gameLoop and gives the main heartbeat, determining the overall game speed.
  *
  */
-setInterval(gameLoop, 50)
+setInterval(gameLoop, 10)
 // This is the step of movement
 let x = 0, y = 0;
