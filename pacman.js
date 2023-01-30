@@ -92,13 +92,8 @@ function gameLoop() {
 
     for(var j = 0; j < element.length; j++) {
 
-      if(currTop==arr[i][0]){
+      if((currTop==arr[i][0])&&(currLeft==arr[i][1])){
         window.localStorage.setItem("StopPacMan", "true");
-      }
-
-      // WE ARE HERE
-      if(currLeft==arr[i][1]){
-        window.localStorage.setItem("PacManStop", "true");
       }
 
     }
