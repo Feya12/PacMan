@@ -16,3 +16,6 @@
     * Make it start after stop `dahoum et ff`
     * Try to understand the better way of stopping we did `ff` `done`
     * Try to implement it for the other directions `ff`
+
+* Homework
+  * Understand what we did since your last commit `ff`

@@ -87,15 +87,20 @@ function gameLoop() {
 
   // Stop
   for(var i = 0; i < arr.length; i++) {
+
     var element = arr[i];
+
     for(var j = 0; j < element.length; j++) {
+
       if(currTop==arr[i][0]){
         window.localStorage.setItem("StopPacMan", "true");
       }
+
       // WE ARE HERE
       if(currLeft==arr[i][1]){
         window.localStorage.setItem("PacManStop", "true");
       }
+
     }
    }
 }
