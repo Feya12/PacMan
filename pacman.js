@@ -91,9 +91,10 @@ function gameLoop() {
     var element = arr[i];
 
     for(var j = 0; j < element.length; j++) {
-
-      if((currTop==arr[i][0])&&(currLeft==arr[i][1])){
+//
+      if((currLeft==arr[i][1])&&(currTop==arr[i][0])){
         window.localStorage.setItem("StopPacMan", "true");
+        //alert("dg")
       }
 
     }
@@ -134,7 +135,7 @@ function InitialisePacMan(){
   window.localStorage.setItem("PacManStop", "false");
 
   // The Google PacMan begins to move to the left in the beginning of the game
-  window.localStorage.setItem("Pressedkey", "ArrowLeft");
+  window.localStorage.setItem("Pressedkey", "ArrowRight");
 
 }
 
