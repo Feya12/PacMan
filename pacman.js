@@ -91,7 +91,7 @@ function gameLoop() {
     var element = arr[i];
 
     for(var j = 0; j < element.length; j++) {
-//
+
       if((currLeft==arr[i][1])&&(currTop==arr[i][0])){
         window.localStorage.setItem("StopPacMan", "true");
         //alert("dg")
@@ -135,7 +135,7 @@ function InitialisePacMan(){
   window.localStorage.setItem("PacManStop", "false");
 
   // The Google PacMan begins to move to the left in the beginning of the game
-  window.localStorage.setItem("Pressedkey", "ArrowRight");
+  //window.localStorage.setItem("Pressedkey", "ArrowRight");
 
 }
 
@@ -144,6 +144,6 @@ function InitialisePacMan(){
  * This cycles the gameLoop and gives the main heartbeat, determining the overall game speed.
  *
  */
-setInterval(gameLoop, 10)
+setInterval(gameLoop, 500)
 // This is the step of movement
 let x = 0, y = 0;
