@@ -135,7 +135,7 @@ function InitialisePacMan(){
   window.localStorage.setItem("PacManStop", "false");
 
   // The Google PacMan begins to move to the left in the beginning of the game
-  //window.localStorage.setItem("Pressedkey", "ArrowRight");
+  //window.localStorage.setItem("Pressedkey", "ArrowLeft");
 
 }
 
@@ -144,6 +144,6 @@ function InitialisePacMan(){
  * This cycles the gameLoop and gives the main heartbeat, determining the overall game speed.
  *
  */
-setInterval(gameLoop, 500)
+setInterval(gameLoop, 50)
 // This is the step of movement
 let x = 0, y = 0;
