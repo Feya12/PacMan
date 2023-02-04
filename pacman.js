@@ -22,9 +22,9 @@ function gameLoop() {
   var arr = [
     //currTop,currLeft                                //coordinates to the:
     [130, 116, "ArrowUp", "ArrowDown", "ArrowRight"], //first wall right
-    [130, 50, "ArrowUp", "ArrowDown", "ArrowLeft"],   //first wall left
-    [87, 117, "ArrowDown", "ArrowRight"],             //wall right from the red ghost
-    [49, 87, "ArrowUp", "ArrowLeft", "ArrowRight"]    //wall left from the red ghosy
+    [130,  50, "ArrowUp", "ArrowDown", "ArrowLeft"],  //first wall left
+    [87,  117, "ArrowDown", "ArrowRight"],            //wall right from the red ghost
+    [49,   87, "ArrowUp", "ArrowLeft", "ArrowRight"]  //wall left from the red ghosy
   ];
 
   //Status Report
@@ -45,6 +45,7 @@ function gameLoop() {
   //
   //
 
+  // Brain Decision based on pressed key
   switch (window.localStorage.getItem("PressedKey")) {
 
     case "ArrowLeft":
@@ -74,6 +75,27 @@ function gameLoop() {
 
   }
 
+  // Brain Decision based on a collision w/ a wall
+  for(var i = 0; i < arr.length; i++) {
+
+    var element = arr[i];
+
+    for(var j = 0; j < element.length; j++) {
+
+      if((currTop==arr[i][0]) && (currLeft==arr[i][1])){
+        window.localStorage.setItem("PacManStop", "true");
+        PacManStop = "true";
+      }
+
+    }
+   }
+
+  //
+  //
+  // EXECUTION OF THE DECISIONS OF THE BRAIN
+  //
+  //
+
   // Here the motion is controlled
 
   // Move
@@ -85,21 +107,7 @@ function gameLoop() {
     moving.style.left = currLeft + y + "px";
   }
 
-  // Stop
-  for(var i = 0; i < arr.length; i++) {
-
-    var element = arr[i];
-
-    for(var j = 0; j < element.length; j++) {
-
-      if((currLeft==arr[i][1])&&(currTop==arr[i][0])){
-        window.localStorage.setItem("StopPacMan", "true");
-        //alert("dg")
-      }
-
-    }
-   }
-}
+} // END OF gameLoop()
 
 // Here we only listen for the PressedKey, we do not take any action.
 document.addEventListener("keydown", e => {
