@@ -53,28 +53,33 @@ function gameLoop() {
       y = -1;
       // Here we un-stop the PacMan in case it is stopped against a wall
       window.localStorage.setItem("PacManStop", "false");
+      //PacManStop = "false";
       break;//left
 
     case "ArrowUp":
       x = -1;
       y = 0;
       window.localStorage.setItem("PacManStop", "false");
+      //PacManStop = "false";
       break;//up
 
     case "ArrowDown":
       x = 1;
       y = 0;
       window.localStorage.setItem("PacManStop", "false");
+      //PacManStop = "false";
       break;//down
 
     case "ArrowRight":
       x = 0;
       y = 1;
       window.localStorage.setItem("PacManStop", "false");
+      //PacManStop = "false";
       break;//right
 
   }
 
+  
   // Brain Decision based on a collision w/ a wall
   for(var i = 0; i < arr.length; i++) {
 
