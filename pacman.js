@@ -24,7 +24,7 @@ function gameLoop() {
     [130, 116, "ArrowUp", "ArrowDown", "ArrowRight"], //first wall right
     [130,  50, "ArrowUp", "ArrowDown", "ArrowLeft"],  //first wall left
     [87,  117, "ArrowDown", "ArrowRight"],            //wall right from the red ghost
-    [49,   87, "ArrowUp", "ArrowLeft", "ArrowRight"]  //wall left from the red ghosy
+    [49,   87, "ArrowUp", "ArrowLeft", "ArrowRight"]  //wall left from the red ghost
   ];
 
   //Status Report

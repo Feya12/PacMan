@@ -1,4 +1,6 @@
-# 6 February 2023
+# 8 February 2023
+
+* Missed README for yesterday
 
 * Mantra
   * Notes
