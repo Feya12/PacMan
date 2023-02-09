@@ -27,15 +27,22 @@ function gameLoop() {
     [49,   87, "ArrowUp", "ArrowLeft", "ArrowRight"], //wall left from the red ghost
     [150, 116, "ArrowUp", "ArrowLeft", "ArrowRight"], //down right 
     [150, 50, "ArrowUp", "ArrowLeft", "ArrowRight"],  //down left
-    [150, 200, "ArrowLeft", "ArrowDown"],             //endmost right
+    //endmost right
+    [150, 200, "ArrowLeft", "ArrowDown"],             
     [107, 200, "ArrowLeft"],
-    [150, -15, "ArrowRight", "ArrowDown"],            //endmost left
+    [230, 180,  "ArrowLeft", "ArrowUp"],
+    [5, 185, "ArrowLeft", "ArrowDown"],
+    //endmost left
+    [150, -15, "ArrowRight", "ArrowDown"],            
     [107, -15, "ArrowRight"],
+    [230, -15, "ArrowRight", "ArrowUp"], 
+    [5, -15, "ArrowRight", "ArrowDown"],
     //other walls
-    [60, 70, "ArrowDown", "ArrowLeft"],
-    [60, 95, "ArrowDown", "ArrowRight"],
-    [60, 50, "ArrowUp", "ArrowRight"],
-    [60, 120, "ArrowUp", "ArrowLeft"]
+    [60, 70,  "ArrowLeft", "ArrowDown"],
+    [60, 95, "ArrowRight", "ArrowDown"],
+    [60, 50, "ArrowRight", "ArrowUp"],
+    [60, 120,"ArrowLeft", "ArrowUp"],
+    [230, -15, "ArrowRight", "ArrowUp"]
 
   ];
 
