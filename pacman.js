@@ -8,7 +8,7 @@ function gameLoop() {
 
   // TODO
   // This should be probably done only once in the beginning of the game.
-  var moving   = document.getElementById("moving");
+  var moving = document.getElementById("moving");
 
   // Indicates if PacMan should move or stop eg. against a wall
   var PacManStop = window.localStorage.getItem("PacManStop");
@@ -19,25 +19,34 @@ function gameLoop() {
 
   // Software Model of the Labyrinth
   // Helps us when we need to stop at a wall and turn at a crossing
+
   var arr = [
-    //currTop,currLeft                                //coordinates to the:
+    //
+    //currTop,currLeft       
+    //                                                //coordinates to the:
     [130, 116, "ArrowUp", "ArrowDown", "ArrowRight"], //first wall right
     [130,  50, "ArrowUp", "ArrowDown", "ArrowLeft"],  //first wall left
     [87,  117, "ArrowDown", "ArrowRight"],            //wall right from the red ghost
     [49,   87, "ArrowUp", "ArrowLeft", "ArrowRight"], //wall left from the red ghost
     [150, 116, "ArrowUp", "ArrowLeft", "ArrowRight"], //down right 
     [150, 50, "ArrowUp", "ArrowLeft", "ArrowRight"],  //down left
+    //
     //endmost right
+    //
     [150, 200, "ArrowLeft", "ArrowDown"],             
     [107, 200, "ArrowLeft"],
     [230, 180,  "ArrowLeft", "ArrowUp"],
     [5, 185, "ArrowLeft", "ArrowDown"],
+    //
     //endmost left
+    //
     [150, -15, "ArrowRight", "ArrowDown"],            
     [107, -15, "ArrowRight"],
     [230, -15, "ArrowRight", "ArrowUp"], 
     [5, -15, "ArrowRight", "ArrowDown"],
+    //
     //other walls
+    //
     [60, 70,  "ArrowLeft", "ArrowDown"],
     [60, 95, "ArrowRight", "ArrowDown"],
     [60, 50, "ArrowRight", "ArrowUp"],
