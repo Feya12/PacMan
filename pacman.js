@@ -14,8 +14,6 @@ function gameLoop() {
   var PacManStop = window.localStorage.getItem("PacManStop");
   var currTop    = moving.offsetTop;
   var currLeft   = moving.offsetLeft;
-  var height     = moving.style.height;
-  var width      = moving.style.width;
 
   // Software Model of the Labyrinth
   // Helps us when we need to stop at a wall and turn at a crossing
@@ -83,8 +81,6 @@ function gameLoop() {
   // Brain Decision based on pressed key
   switch (window.localStorage.getItem("PressedKey")) {
 
-  //tried with if
-
     case "ArrowLeft":
       x = 0;
       y = -1;
@@ -121,15 +117,14 @@ function gameLoop() {
   for(var i = 0; i < arr.length; i++) {
 
     var element = arr[i];
+    
 
-    for(var j = 0; j < element.length; j++) {
-
-      if((currTop==arr[i][0]) && (currLeft==arr[i][1])){
+      if((currTop==element[0]) && (currLeft==element[1])){
         window.localStorage.setItem("PacManStop", "true");
         PacManStop = "true";
       }
 
-    }
+    
    }
 
   //
