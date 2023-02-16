@@ -56,7 +56,7 @@ function gameLoop() {
     [35, 50, "ArrowRight", "ArrowLeft", "ArrowDown"]
     [35, 135, "ArrowRight", "ArrowLeft"],
     [35, 35, "ArrowRight", "ArrowLeft"]
-    there is a problem with some of the walls because the stop had been 
+    /*there is a problem with some of the walls because the stop had been 
     working before I added them*/
   ];
 
@@ -117,14 +117,12 @@ function gameLoop() {
   for(var i = 0; i < arr.length; i++) {
 
     var element = arr[i];
-    
 
       if((currTop==element[0]) && (currLeft==element[1])){
         window.localStorage.setItem("PacManStop", "true");
         PacManStop = "true";
       }
 
-    
    }
 
   //
