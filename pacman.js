@@ -86,28 +86,24 @@ function gameLoop() {
       y = -1;
       // Here we un-stop the PacMan in case it is stopped against a wall
       window.localStorage.setItem("PacManStop", "false");
-      //PacManStop = "false";
       break;//left
 
     case "ArrowUp":
       x = -1;
       y = 0;
       window.localStorage.setItem("PacManStop", "false");
-      //PacManStop = "false";
       break;//up
 
     case "ArrowDown":
       x = 1;
       y = 0;
       window.localStorage.setItem("PacManStop", "false");
-      //PacManStop = "false";
       break;//down
 
     case "ArrowRight":
       x = 0;
       y = 1;
       window.localStorage.setItem("PacManStop", "false");
-      //PacManStop = "false";
       break;//right
 
   }
@@ -187,6 +183,6 @@ function InitialisePacMan(){
  * This cycles the gameLoop and gives the main heartbeat, determining the overall game speed.
  *
  */
-setInterval(gameLoop, 50)
+setInterval(gameLoop, 75)
 // This is the step of movement
 let x = 0, y = 0;
