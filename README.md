@@ -12,6 +12,7 @@
 * Feya's Features
   * Very observant (notices all mistake I make on shared screen) `since 2 Jan 2023`
   * v regular w /the Notes `since 4 February 2023`
-
+* DO's:
+  * fixed a problem with the walls, because there was one since last week `ff` `done`
 * Homework
   * See what should be done for the PacMan to start after stopping. `ff` 

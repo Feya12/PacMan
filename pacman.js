@@ -50,14 +50,12 @@ function gameLoop() {
     [60, 50, "ArrowRight", "ArrowUp"],
     [60, 120,"ArrowLeft", "ArrowUp"],
     [230, -15, "ArrowRight", "ArrowUp"],
-    /*[155, 70, "ArrowLeft", "ArrowDown"],
+    [155, 70, "ArrowLeft", "ArrowDown"],
     [155, 90, "ArrowRight", "ArrowDown"],
     [35, 120, "ArrowRight", "ArrowLeft", "ArrowDown"],
-    [35, 50, "ArrowRight", "ArrowLeft", "ArrowDown"]
+    [35, 50, "ArrowRight", "ArrowLeft", "ArrowDown"],
     [35, 135, "ArrowRight", "ArrowLeft"],
     [35, 35, "ArrowRight", "ArrowLeft"]
-    /*there is a problem with some of the walls because the stop had been 
-    working before I added them*/
   ];
 
   //Status Report
