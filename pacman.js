@@ -63,6 +63,7 @@ function gameLoop() {
   document.getElementById("status-y").innerHTML = y;
   document.getElementById("currTop").innerHTML  = currTop;
   document.getElementById("currLeft").innerHTML = currLeft;
+  document.getElementById("PacManStop").innerHTML = PacManStop;
 
   //
   //
