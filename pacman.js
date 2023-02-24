@@ -78,6 +78,13 @@ function gameLoop() {
   redGhost.style.left = y1 + 'px'; 
   redGhost.style.top = x1 + 'px';
 
+  //Pink Ghost
+  var pinkGhost = document.getElementById('ghostPink');
+  var x2 = Math.floor(Math.random()*30);
+  var y2 = Math.floor(Math.random()*30);
+  pinkGhost.style.left = y2 + 'px'; 
+  pinkGhost.style.top = x2 + 'px';
+
   /*if(redGhost.style.top<=230 + 'px'){
    
   }
