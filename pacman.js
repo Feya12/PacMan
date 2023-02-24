@@ -71,6 +71,20 @@ function gameLoop() {
   //
   //
 
+  // Red Ghost 
+  var redGhost = document.getElementById('ghostRed');
+  var x1 = Math.floor(Math.random()*30);
+  var y1 = Math.floor(Math.random()*30);
+  redGhost.style.left = y1 + 'px'; 
+  redGhost.style.top = x1 + 'px';
+
+  /*if(redGhost.style.top<=230 + 'px'){
+   
+  }
+  if(redGhost.style.left >= -55 && redGhost.style.left <=235 + 'px')
+  {
+   
+  }*/ 
   //
   //
   // Brain of PacMan
