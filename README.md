@@ -16,4 +16,6 @@
   * make the pink and the red ghost to move random `ff` `done`
 
 * Homework
-  * See what should be done for the PacMan to start after stopping. `ff` 
+  * See what should be done for the PacMan to start after stopping. `ff` `done`
+    * Check how we did it and think about it `ff`
+  * How can we make PacMan move only in the middle of the corridors `ff` `in progress`

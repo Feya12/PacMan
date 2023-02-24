@@ -18,29 +18,32 @@ function gameLoop() {
   // Software Model of the Labyrinth
   // Helps us when we need to stop at a wall and turn at a crossing
 
+  // [130, [down, right,-15,20,all directions], [,20,45, all except down]
+
+
   var arr = [
     //
-    //currTop,currLeft       
+    //currTop,currLeft
     //                                                //coordinates to the:
     [130, 116, "ArrowUp", "ArrowDown", "ArrowRight"], //first wall right
     [130,  50, "ArrowUp", "ArrowDown", "ArrowLeft"],  //first wall left
     [87,  117, "ArrowDown", "ArrowRight"],            //wall right from the red ghost
     [49,   87, "ArrowUp", "ArrowLeft", "ArrowRight"], //wall left from the red ghost
-    [150, 116, "ArrowUp", "ArrowLeft", "ArrowRight"], //down right 
+    [150, 116, "ArrowUp", "ArrowLeft", "ArrowRight"], //down right
     [150, 50, "ArrowUp", "ArrowLeft", "ArrowRight"],  //down left
     //
     //endmost right
     //
-    [150, 200, "ArrowLeft", "ArrowDown"],             
+    [150, 200, "ArrowLeft", "ArrowDown"],
     [107, 200, "ArrowLeft"],
-    [230, 180,  "ArrowLeft", "ArrowUp"],
-    [5, 185, "ArrowLeft", "ArrowDown"],
+    [230, 180, "ArrowLeft", "ArrowUp"],
+    [5, 185,   "ArrowLeft", "ArrowDown"],
     //
     //endmost left
     //
-    [150, -15, "ArrowRight", "ArrowDown"],            
+    [150, -15, "ArrowRight", "ArrowDown"],
     [107, -15, "ArrowRight"],
-    [230, -15, "ArrowRight", "ArrowUp"], 
+    [230, -15, "ArrowRight", "ArrowUp"],
     [5, -15, "ArrowRight", "ArrowDown"],
     //
     //other walls
@@ -55,6 +58,7 @@ function gameLoop() {
     [35, 120, "ArrowRight", "ArrowLeft", "ArrowDown"],
     [35, 50, "ArrowRight", "ArrowLeft", "ArrowDown"],
     [35, 135, "ArrowRight", "ArrowLeft"],
+    [84, 95, "ArrowRight", "ArrowLeft", "ArrowUp"],
     [35, 35, "ArrowRight", "ArrowLeft"]
   ];
 
@@ -71,35 +75,36 @@ function gameLoop() {
   //
   //
 
-  // Red Ghost 
+  // Red Ghost
   var redGhost = document.getElementById('ghostRed');
   var x1 = Math.floor(Math.random()*30);
   var y1 = Math.floor(Math.random()*30);
-  redGhost.style.left = y1 + 'px'; 
+  redGhost.style.left = y1 + 'px';
   redGhost.style.top = x1 + 'px';
 
   //Pink Ghost
   var pinkGhost = document.getElementById('ghostPink');
   var x2 = Math.floor(Math.random()*60);
   var y2 = Math.floor(Math.random()*60);
-  pinkGhost.style.left = y2 + 'px'; 
+  pinkGhost.style.left = y2 + 'px';
   pinkGhost.style.top = x2 + 'px';
 
   /*if(redGhost.style.top<=230 + 'px'){
-   
+
   }
   if(redGhost.style.left >= -55 && redGhost.style.left <=235 + 'px')
   {
-   
-  }*/ 
+
+  }*/
   //
   //
   // Brain of PacMan
   //
   //
+  var PressedKey = window.localStorage.getItem("PressedKey");
 
   // Brain Decision based on pressed key
-  switch (window.localStorage.getItem("PressedKey")) {
+  switch (PressedKey) {
 
     case "ArrowLeft":
       x = 0;
@@ -128,13 +133,16 @@ function gameLoop() {
 
   }
 
-  
+
   // Brain Decision based on a collision w/ a wall
   for(var i = 0; i < arr.length; i++) {
 
     var element = arr[i];
 
-      if((currTop==element[0]) && (currLeft==element[1])){
+      if((currTop  == element[0]) &&
+         (currLeft == element[1]  &&
+          // Here we check if the direction is allowed
+          !element.includes(PressedKey))){
         window.localStorage.setItem("PacManStop", "true");
         PacManStop = "true";
       }
