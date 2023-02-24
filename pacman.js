@@ -80,8 +80,8 @@ function gameLoop() {
 
   //Pink Ghost
   var pinkGhost = document.getElementById('ghostPink');
-  var x2 = Math.floor(Math.random()*30);
-  var y2 = Math.floor(Math.random()*30);
+  var x2 = Math.floor(Math.random()*60);
+  var y2 = Math.floor(Math.random()*60);
   pinkGhost.style.left = y2 + 'px'; 
   pinkGhost.style.top = x2 + 'px';
 

@@ -13,6 +13,7 @@
   * Very observant (notices all mistake I make on shared screen) `since 2 Jan 2023`
   * v regular w /the Notes `since 4 February 2023`
 * DO's:
+  * make the pink and the red ghost to move random `ff` `done`
 
 * Homework
   * See what should be done for the PacMan to start after stopping. `ff` 
