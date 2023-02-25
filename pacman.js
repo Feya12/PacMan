@@ -6,8 +6,6 @@ function gameLoop() {
   //
   //
 
-  // TODO
-  // This should be probably done only once in the beginning of the game.
   var moving = document.getElementById("moving");
 
   // Indicates if PacMan should move or stop eg. against a wall
@@ -79,23 +77,16 @@ function gameLoop() {
   var redGhost = document.getElementById('ghostRed');
   var x1 = Math.floor(Math.random()*30);
   var y1 = Math.floor(Math.random()*30);
-  redGhost.style.left = y1 + 'px';
   redGhost.style.top = x1 + 'px';
+  redGhost.style.left = y1 + 'px';
 
   //Pink Ghost
   var pinkGhost = document.getElementById('ghostPink');
-  var x2 = Math.floor(Math.random()*60);
-  var y2 = Math.floor(Math.random()*60);
+  var x2 = Math.floor(Math.random()*100);
+  var y2 = Math.floor(Math.random()*100);
   pinkGhost.style.left = y2 + 'px';
   pinkGhost.style.top = x2 + 'px';
 
-  /*if(redGhost.style.top<=230 + 'px'){
-
-  }
-  if(redGhost.style.left >= -55 && redGhost.style.left <=235 + 'px')
-  {
-
-  }*/
   //
   //
   // Brain of PacMan
@@ -165,7 +156,14 @@ function gameLoop() {
   if((y!=0) && (PacManStop == "false")){
     moving.style.left = currLeft + y + "px";
   }
-
+  //Move for the red ghost
+  /*if(currTopR<230+'px'){
+    redGhost.style.top = x1 + 'px';
+  }
+  /*if((currLeftR<230 + 'px') && (currLeftR > -15 + 'px'))
+  {
+    redGhost.style.left = y1 + 'px';
+  }*/
 } // END OF gameLoop()
 
 // Here we only listen for the PressedKey, we do not take any action.
@@ -211,6 +209,6 @@ function InitialisePacMan(){
  * This cycles the gameLoop and gives the main heartbeat, determining the overall game speed.
  *
  */
-setInterval(gameLoop, 75)
+setInterval(gameLoop, 40)
 // This is the step of movement
 let x = 0, y = 0;
