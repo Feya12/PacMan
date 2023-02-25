@@ -25,10 +25,11 @@ function gameLoop() {
     //                                                //coordinates to the:
     [130, 116, "ArrowUp", "ArrowDown", "ArrowRight"], //first wall right
     [130,  50, "ArrowUp", "ArrowDown", "ArrowLeft"],  //first wall left
-    [87,  117, "ArrowDown", "ArrowRight"],            //wall right from the red ghost
+    [87,  116, "ArrowDown", "ArrowLeft"],            //wall right from the red ghost
     [49,   87, "ArrowUp", "ArrowLeft", "ArrowRight"], //wall left from the red ghost
     [150, 116, "ArrowUp", "ArrowLeft", "ArrowRight"], //down right
     [150, 50, "ArrowUp", "ArrowLeft", "ArrowRight"],  //down left
+    [87, 50, "ArrowDown", "ArrowRight"],
     //
     //endmost right
     //
@@ -80,12 +81,26 @@ function gameLoop() {
   redGhost.style.top = x1 + 'px';
   redGhost.style.left = y1 + 'px';
 
-  //Pink Ghost
+  // Pink Ghost
   var pinkGhost = document.getElementById('ghostPink');
-  var x2 = Math.floor(Math.random()*100);
-  var y2 = Math.floor(Math.random()*100);
+  var x2 = Math.floor(Math.random()*40);
+  var y2 = Math.floor(Math.random()*40);
   pinkGhost.style.left = y2 + 'px';
   pinkGhost.style.top = x2 + 'px';
+
+  // Blue Chost
+  var blueGhost = document.getElementById('ghostBlue');
+  var x3 = Math.floor(Math.random()*50);
+  var y3 = Math.floor(Math.random()*50);
+  blueGhost.style.left = y3 + 'px';
+  blueGhost.style.top = x3 + 'px';
+
+  // Orange Ghost
+  var orangeGhost = document.getElementById('ghostOrange');
+  var x4 = Math.floor(Math.random()*65);
+  var y4 = Math.floor(Math.random()*65);
+  orangeGhost.style.left = y4 + 'px';
+  orangeGhost.style.top = x4 + 'px';
 
   //
   //
