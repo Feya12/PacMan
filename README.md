@@ -14,6 +14,7 @@
   * v regular w /the Notes `since 4 February 2023`
 * DO's:
   * make the blue and the orange ghost to move random `ff` `done`
+  * make borders for the movement of the ghosts `ff` `done`
 
 * Homework
     * Check how we did the PacMan to start after stopping and think about it `ff` `done`
