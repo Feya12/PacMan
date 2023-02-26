@@ -9,6 +9,7 @@ function gameLoop() {
   var moving = document.getElementById("moving");
 
   // Indicates if PacMan should move or stop eg. against a wall
+  var GhostStop = window.localStorage.getItem("GhostStop");
   var PacManStop = window.localStorage.getItem("PacManStop");
   var currTop    = moving.offsetTop;
   var currLeft   = moving.offsetLeft;
@@ -171,14 +172,24 @@ function gameLoop() {
   if((y!=0) && (PacManStop == "false")){
     moving.style.left = currLeft + y + "px";
   }
-  //Move for the red ghost
-  /*if(currTopR<230+'px'){
-    redGhost.style.top = x1 + 'px';
+  
+  //Move for the ghosts
+  if((x1 > 230 + 'px')&&((y1 < -15 + 'px')||(y1 > 235 + 'px'))){
+    window.localStorage.setItem("GhostStop", "true");
+    GhostStop = "true";
   }
-  /*if((currLeftR<230 + 'px') && (currLeftR > -15 + 'px'))
-  {
-    redGhost.style.left = y1 + 'px';
-  }*/
+  if((x2 > 230 + 'px')&&((y2 < -15 + 'px')||(y2 > 235 + 'px'))){
+    window.localStorage.setItem("GhostStop", "true");
+    GhostStop = "true";
+  }
+  if((x3 > 230 + 'px')&&((y3 < -15 + 'px')||(y3 > 235 + 'px'))){
+    window.localStorage.setItem("GhostStop", "true");
+    GhostStop = "true";
+  }
+  if((x4 > 230 + 'px')&&((y4 < -15 + 'px')||(y4 > 235 + 'px'))){
+    window.localStorage.setItem("GhostStop", "true");
+    GhostStop = "true";
+  }
 } // END OF gameLoop()
 
 // Here we only listen for the PressedKey, we do not take any action.
