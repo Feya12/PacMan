@@ -17,9 +17,6 @@ function gameLoop() {
   // Software Model of the Labyrinth
   // Helps us when we need to stop at a wall and turn at a crossing
 
-  // [130, [down, right,-15,20,all directions], [,20,45, all except down]
-
-
   var arr = [
     //
     //currTop,currLeft
@@ -61,6 +58,67 @@ function gameLoop() {
     [84, 95, "ArrowRight", "ArrowLeft", "ArrowUp"],
     [35, 35, "ArrowRight", "ArrowLeft"]
   ];
+
+  // [130, [down, right,-15,20,all directions], [,20,45, all except down]
+
+  var corridor = [
+    [150, 
+      [
+        -15, -14, -13, -12, -11, 
+        -10, -9, -8, -7, -6, 
+        -5, -4, -3, -2, -1, 
+        0, 1, 2, 3, 4, 5,
+        6, 7, 8, 9, 10, 
+        11, 12, 13, 14, 15,
+        16, 17, 18, 19, "ArrowRight", "ArrowLeft"
+      ],
+      [20, "ArrowDown", "ArrowLeft", "ArrowUp", "ArrowRight"],
+      [
+        21, 22, 23, 24, 25, 26,
+        27, 28, 29, 30, 31, 32,
+        33, 34, 35, 36, 37, 38,
+        39, 40, 41, 42, 43, 44, "ArrowRight", "ArrowLeft"
+      ],
+      [45, "ArrowLeft", "ArrowRight", "ArrowUp"]
+    ],
+    [150,
+      [89, 90, "ArrowDown", "ArrowRight"]
+      [
+        91, 92, 93, 94, 
+        95, 96, 97, 98, 99, 
+        100, 101, 102, 103, 104,
+        105, 106, 108, 109, "ArrowLeft", "ArrowRight" 
+      ], 
+      [
+        110, 111, 112, 113, 114,
+        115, 116, 117, 118, 119, 120,
+        "ArrowLeft", "ArrowRight", "ArrowDown"
+      ],
+      [ 
+        121, 122, 123, 124, 125,
+        126, 127, 128, 129, 130,
+        131, 132, 133, 134, 135,
+        "ArrowLeft", "ArrowRight", "ArrowUp"],
+      [136, 137, 138, 139, 140, "ArrowLeft", "ArrowRight"]
+      [
+        141, 142, 143, 144, 145,
+        146, 147, 148, 149, 150,
+        "ArrowLeft", "ArrowRight", "ArrowUp"
+      ], 
+      [
+        151, 152, 153, 154, 155,
+        156, 157, 158, 159, 160,
+        161, 162, 163, 164, 165,
+        166, 167, 168, 169, 170,
+        171, 172, 173, 174, 175, 
+        "ArrowLeft", "ArrowRight"
+      ],
+      [176, 177, 180, "ArrowRight", "ArrowDown"]
+    ]
+    
+  ];
+
+  
 
   //Status Report
   document.getElementById("status-x").innerHTML = x;
@@ -235,6 +293,6 @@ function InitialisePacMan(){
  * This cycles the gameLoop and gives the main heartbeat, determining the overall game speed.
  *
  */
-setInterval(gameLoop, 40)
+setInterval(gameLoop, 150)
 // This is the step of movement
 let x = 0, y = 0;
