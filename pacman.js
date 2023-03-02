@@ -396,6 +396,6 @@ function InitialisePacMan(){
  * This cycles the gameLoop and gives the main heartbeat, determining the overall game speed.
  *
  */
-setInterval(gameLoop, 150)
+setInterval(gameLoop, 50)
 // This is the step of movement
 let x = 0, y = 0;
