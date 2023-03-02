@@ -1,4 +1,4 @@
-# 28 February 2023
+# 02 March 2023
 
 * Mantra
   * Notes
@@ -12,7 +12,7 @@
 * Feya's Features
   * Very observant (notices all mistake I make on shared screen) `since 2 Jan 2023`
   * v regular w /the Notes `since 4 February 2023`
-* DO's:
+
 
 * Homework
   * How can we make PacMan move only in the middle of the corridors `ff` `in progress`
