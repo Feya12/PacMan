@@ -1,4 +1,4 @@
-# 02 Marc 2023
+# 02 March 2023
 
 * Mantra
   * Notes
