@@ -62,7 +62,7 @@ function gameLoop() {
   // [130, [down, right,-15,20,all directions], [,20,45, all except down]
 
   var corridor = [
-    [
+    [60,
       [-15, "ArrowRight", "ArrowUp"],
       [
        -13, -12, -11,
