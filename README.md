@@ -14,3 +14,5 @@
   * v regular w /the Notes `since 4 February 2023`
 * Homework
   * How can we make PacMan move only in the middle of the corridors `ff` `in progress`
+    * Make it change direction only on a crossing for the other three directions `ff`
+    * Enter all missing crossings and their allowed directions `ff`
