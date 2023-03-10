@@ -31,6 +31,7 @@ function gameLoop() {
     //
     //endmost right
     //
+    [130, 85, "ArrowLeft", "ArrowRight"],
     [150, 200, "ArrowLeft", "ArrowDown"],
     [107, 200, "ArrowLeft"],
     [230, 180, "ArrowLeft", "ArrowUp"],
