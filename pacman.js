@@ -62,15 +62,22 @@ function gameLoop() {
     [84, 95, "ArrowRight", "ArrowLeft", "ArrowUp"],
     [35, 35, "ArrowRight", "ArrowLeft"],
     [228, 180, "ArrowLeft", "ArrowUp"],
-    [206, 180, "ArrowLeft", "ArrowDown"],
-    [206, 145, "ArrowRight", "ArrowUp"], 
-    [206, 167, "ArrowLeft", "ArrowRight", "ArrowUp"]
+    [204, 180, "ArrowLeft", "ArrowDown"],
+    [204, 145, "ArrowRight", "ArrowUp"], 
+    [156, 180, "ArrowLeft", "ArrowDown"],
+    [180, 180, "ArrowLeft", "ArrowUp"],
+    [180, 167, "ArrowRight", "ArrowDown"],
+    [204, 167, "ArrowLeft", "ArrowRight", "ArrowUp"],
+    [228, 97, "ArrowLeft", "ArrowRight", "ArrowUp"],
+    [204, 97, "ArrowRight", "ArrowDown"], 
+    [204, 119, "ArrowLeft", "ArrowUp"],
+    [180, 97, "ArrowLeft", "ArrowRight", "ArrowDown"]
   ];
 
   // [130, [down, right,-15,20,all directions], [,20,45, all except down]
 
   // I will not delete it, but we do not need it ;)
-  var corridor = [
+  /*var corridor = [
     [5,
       [-15, "ArrowRight", "ArrowUp", "ArrowDown"],
       [
@@ -424,7 +431,7 @@ function gameLoop() {
         "ArrowUp"
       ],
     ]
-  ];
+  ];*/
 
 
 
