@@ -29,9 +29,12 @@ function gameLoop() {
     [150, 50, "ArrowUp", "ArrowLeft", "ArrowRight"],  //down left
     [87, 50, "ArrowDown", "ArrowRight"],
     //
-    //endmost right
+    //initial coordinates to be possible to go left
     //
     [130, 85, "ArrowLeft", "ArrowRight"],
+    //
+    //endmost right
+    //
     [150, 200, "ArrowLeft", "ArrowDown"],
     [107, 200, "ArrowLeft"],
     [230, 180, "ArrowLeft", "ArrowUp"],
@@ -57,7 +60,11 @@ function gameLoop() {
     [35, 50, "ArrowRight", "ArrowLeft", "ArrowDown"],
     [35, 135, "ArrowRight", "ArrowLeft"],
     [84, 95, "ArrowRight", "ArrowLeft", "ArrowUp"],
-    [35, 35, "ArrowRight", "ArrowLeft"]
+    [35, 35, "ArrowRight", "ArrowLeft"],
+    [228, 180, "ArrowLeft", "ArrowUp"],
+    [206, 180, "ArrowLeft", "ArrowDown"],
+    [206, 145, "ArrowRight", "ArrowUp"], 
+    [206, 167, "ArrowLeft", "ArrowRight", "ArrowUp"]
   ];
 
   // [130, [down, right,-15,20,all directions], [,20,45, all except down]
