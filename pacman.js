@@ -7,9 +7,7 @@ function gameLoop() {
   //
 
   var moving = document.getElementById("moving");
-
   // Indicates if PacMan should move or stop eg. against a wall
-  var GhostStop = window.localStorage.getItem("GhostStop");
   var PacManStop = window.localStorage.getItem("PacManStop");
   var currTop    = moving.offsetTop;
   var currLeft   = moving.offsetLeft;
@@ -21,9 +19,9 @@ function gameLoop() {
     //
     //currTop,currLeft
     //                                                //coordinates to the:
-    [130, 119, "ArrowUp", "ArrowDown", "ArrowLeft"], //first wall right
-    [130,  50, "ArrowUp", "ArrowDown", "ArrowRight"],  //first wall left
-    [87,  116, "ArrowDown", "ArrowLeft"],            //wall right from the red ghost
+    [130, 119, "ArrowUp", "ArrowDown", "ArrowLeft"],  //first wall right
+    [130,  50, "ArrowUp", "ArrowDown", "ArrowRight"], //first wall left
+    [87,  116, "ArrowDown", "ArrowLeft"],             //wall right from the red ghost
     [49,   87, "ArrowUp", "ArrowLeft", "ArrowRight"], //wall left from the red ghost
     [150, 116, "ArrowUp", "ArrowLeft", "ArrowRight"], //down right
     [150, 50, "ArrowUp", "ArrowLeft", "ArrowRight"],  //down left
@@ -61,17 +59,35 @@ function gameLoop() {
     [35, 135, "ArrowRight", "ArrowLeft"],
     [84, 95, "ArrowRight", "ArrowLeft", "ArrowUp"],
     [35, 35, "ArrowRight", "ArrowLeft"],
-    [228, 180, "ArrowLeft", "ArrowUp"],
-    [204, 180, "ArrowLeft", "ArrowDown"],
-    [204, 145, "ArrowRight", "ArrowUp"], 
-    [156, 180, "ArrowLeft", "ArrowDown"],
-    [180, 180, "ArrowLeft", "ArrowUp"],
+    //
+    //divided by currTop
+    //
+    //154px
+    //    
+    [154, 97, "ArrowRight", "ArrowDown"],
+    [154, 119, "ArrowLeft", "ArrowRight", "ArrowUp"],    
+    [154, 180, "ArrowLeft", "ArrowDown"],
+    //
+    //180px
+    //
+    [180, 97, "ArrowLeft", "ArrowRight", "ArrowUp"],
+    [180, 119, "ArrowLeft", "ArrowRight", "ArrowDown"],
+    [180, 144, "ArrowLeft", "ArrowUp", "ArrowDown"], 
     [180, 167, "ArrowRight", "ArrowDown"],
-    [204, 167, "ArrowLeft", "ArrowRight", "ArrowUp"],
-    [228, 97, "ArrowLeft", "ArrowRight", "ArrowUp"],
+    [180, 180, "ArrowLeft", "ArrowUp"],
+    //
+    //204px
+    //
     [204, 97, "ArrowRight", "ArrowDown"], 
     [204, 119, "ArrowLeft", "ArrowUp"],
-    [180, 97, "ArrowLeft", "ArrowRight", "ArrowDown"]
+    [204, 144, "ArrowRight", "ArrowUp"],
+    [204, 167, "ArrowLeft", "ArrowRight", "ArrowUp"],    
+    [204, 180, "ArrowLeft", "ArrowDown"],
+    //
+    //228px
+    //
+    [228, 97, "ArrowRight", "ArrowUp"],
+    [228, 180, "ArrowLeft", "ArrowUp"]    
   ];
 
   // [130, [down, right,-15,20,all directions], [,20,45, all except down]
