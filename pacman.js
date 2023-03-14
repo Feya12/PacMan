@@ -26,6 +26,8 @@ function gameLoop() {
     [150, 116, "ArrowUp", "ArrowLeft", "ArrowRight"], //down right
     [150, 50, "ArrowUp", "ArrowLeft", "ArrowRight"],  //down left
     [87, 50, "ArrowDown", "ArrowRight"],
+    [107, -15, "ArrowRight"],
+    [107, 185, "ArrowLeft"],
     //
     //initial coordinates to be possible to go left
     //
@@ -42,7 +44,6 @@ function gameLoop() {
     //
     [150, -15, "ArrowRight", "ArrowDown"],
     [107, -15, "ArrowRight"],
-    [230, -15, "ArrowRight", "ArrowUp"],
     [5, -15, "ArrowRight", "ArrowDown"],
     //
     //other walls
@@ -63,13 +64,18 @@ function gameLoop() {
     //divided by currTop
     //
     //154px
-    //    
+    //   
+    [154, 73, "ArrowLeft", "ArrowDown"], 
     [154, 97, "ArrowRight", "ArrowDown"],
     [154, 119, "ArrowLeft", "ArrowRight", "ArrowUp"],    
     [154, 180, "ArrowLeft", "ArrowDown"],
     //
     //180px
     //
+    [180, -15, "ArrowLeft", "ArrowRight"],
+    [180, 3, "ArrowLeft", "ArrowDown"],
+    [180, 24, "ArrowRight", "ArrowUp", "ArrowDown"],
+    [180, 50, "ArrowLeft", "ArrowRight", "ArrowDown"],
     [180, 97, "ArrowLeft", "ArrowRight", "ArrowUp"],
     [180, 119, "ArrowLeft", "ArrowRight", "ArrowDown"],
     [180, 144, "ArrowLeft", "ArrowUp", "ArrowDown"], 
@@ -78,6 +84,11 @@ function gameLoop() {
     //
     //204px
     //
+    [204, -15, "ArrowRight", "ArrowDown"],
+    [204, 3, "ArrowLeft", "ArrowRight", "ArrowUp"],
+    [204, 24, "ArrowLeft", "ArrowUp"],
+    [204, 50, "ArrowRight", "ArrowUp"],
+    [204, 75, "ArrowLeft", "ArrowDown"],
     [204, 97, "ArrowRight", "ArrowDown"], 
     [204, 119, "ArrowLeft", "ArrowUp"],
     [204, 144, "ArrowRight", "ArrowUp"],
@@ -86,6 +97,9 @@ function gameLoop() {
     //
     //228px
     //
+    [228, -15, "ArrowRight", "ArrowUp"],
+    [228, 70, "ArrowLeft", "ArrowRight", "ArrowUp"],
+    [228, 71, "ArrowLeft", "ArrowRight", "ArrowUp"],
     [228, 97, "ArrowRight", "ArrowUp"],
     [228, 180, "ArrowLeft", "ArrowUp"]    
   ];
@@ -466,8 +480,8 @@ function gameLoop() {
 
   // Red Ghost
   var redGhost = document.getElementById('ghostRed');
-  var x1 = Math.floor(Math.random()*30 - 10);
-  var y1 = Math.floor(Math.random()*30 - 10);
+  var x1 = Math.floor(Math.random()*30 - 100);
+  var y1 = Math.floor(Math.random()*30 - 100);
   redGhost.style.top = x1 + 'px';
   redGhost.style.left = y1 + 'px';
 
