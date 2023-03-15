@@ -15,7 +15,7 @@ function gameLoop() {
   // Software Model of the Labyrinth
   // Helps us when we need to stop at a wall and turn at a crossing
 
-  var arr = [
+  var crossings_and_allowed_directions = [
     //
     //currTop,currLeft
     //                                                //coordinates to the:
@@ -74,7 +74,7 @@ function gameLoop() {
     [5, 180, "ArrowLeft", "ArrowDown"],
     //35px
     //
-    [35, -15, "ArrowRight", "ArrowUp", "ArrowDown"], 
+    [35, -15, "ArrowRight", "ArrowUp", "ArrowDown"],
     [35, 70, "ArrowLeft", "ArrowRight", "ArrowUp"],
     [35, 95, "ArrowLeft", "ArrowRight", "ArrowUp"],
     [35, 119, "ArrowLeft", "ArrowRight", "ArrowDown"],
@@ -82,7 +82,7 @@ function gameLoop() {
     //60px
     //
     [60, -15, "ArrowRight", "ArrowUp"],
-    [60, 24, "ArrowLeft", "ArrowUp", "ArrowDown"],  
+    [60, 24, "ArrowLeft", "ArrowUp", "ArrowDown"],
     [60, 70, "ArrowLeft", "ArrowDown"],
     [60, 95, "ArrowRight", "ArrowDown"],
     [60, 119, "ArrowLeft", "ArrowUp"],
@@ -91,10 +91,10 @@ function gameLoop() {
     [60, 180, "ArrowLeft", "ArrowUp"],
     //
     //154px
-    //   
-    [154, 73, "ArrowLeft", "ArrowDown"], 
+    //
+    [154, 73, "ArrowLeft", "ArrowDown"],
     [154, 97, "ArrowRight", "ArrowDown"],
-    [154, 119, "ArrowLeft", "ArrowRight", "ArrowUp"],    
+    [154, 119, "ArrowLeft", "ArrowRight", "ArrowUp"],
     [154, 180, "ArrowLeft", "ArrowDown"],
     //
     //180px
@@ -105,7 +105,7 @@ function gameLoop() {
     [180, 50, "ArrowLeft", "ArrowRight", "ArrowDown"],
     [180, 97, "ArrowLeft", "ArrowRight", "ArrowUp"],
     [180, 119, "ArrowLeft", "ArrowRight", "ArrowDown"],
-    [180, 144, "ArrowLeft", "ArrowUp", "ArrowDown"], 
+    [180, 144, "ArrowLeft", "ArrowUp", "ArrowDown"],
     [180, 167, "ArrowRight", "ArrowDown"],
     [180, 180, "ArrowLeft", "ArrowUp"],
     //
@@ -116,10 +116,10 @@ function gameLoop() {
     [204, 24, "ArrowLeft", "ArrowUp"],
     [204, 50, "ArrowRight", "ArrowUp"],
     [204, 75, "ArrowLeft", "ArrowDown"],
-    [204, 97, "ArrowRight", "ArrowDown"], 
+    [204, 97, "ArrowRight", "ArrowDown"],
     [204, 119, "ArrowLeft", "ArrowUp"],
     [204, 144, "ArrowRight", "ArrowUp"],
-    [204, 167, "ArrowLeft", "ArrowRight", "ArrowUp"],    
+    [204, 167, "ArrowLeft", "ArrowRight", "ArrowUp"],
     [204, 180, "ArrowLeft", "ArrowDown"],
     //
     //228px
@@ -128,7 +128,7 @@ function gameLoop() {
     [228, 70, "ArrowLeft", "ArrowRight", "ArrowUp"],
     [228, 71, "ArrowLeft", "ArrowRight", "ArrowUp"],
     [228, 97, "ArrowRight", "ArrowUp"],
-    [228, 180, "ArrowLeft", "ArrowUp"]    
+    [228, 180, "ArrowLeft", "ArrowUp"]
   ];
 
   // [130, [down, right,-15,20,all directions], [,20,45, all except down]
@@ -547,9 +547,9 @@ function gameLoop() {
 
       // Quick & Dirty
       // Later this should be moved into a fuction
-      for(var i = 0; i < arr.length; i++) {
+      for(var i = 0; i < crossings_and_allowed_directions.length; i++) {
 
-        var element = arr[i];
+        var element = crossings_and_allowed_directions[i];
 
           if((currTop  == element[0]) &&
             (currLeft == element[1]  &&
@@ -587,9 +587,9 @@ function gameLoop() {
   }
 
   // Brain Decision based on a collision w/ a wall
-  for(var i = 0; i < arr.length; i++) {
+  for(var i = 0; i < crossings_and_allowed_directions.length; i++) {
 
-    var element = arr[i];
+    var element = crossings_and_allowed_directions[i];
 
       if((currTop  == element[0]) &&
          (currLeft == element[1]  &&

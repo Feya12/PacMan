@@ -1,5 +1,7 @@
 # 15 March 2023
 
+* Today
+  * From some places in the right part of the labyrinth PacMan does not go left anymore `in progress`
 * Mantra
   * Notes
     * This Note should contain only today.
