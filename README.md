@@ -1,4 +1,4 @@
-# 13 March 2023
+# 15 March 2023
 
 * Mantra
   * Notes
@@ -15,4 +15,4 @@
 * Homework
   * How can we make PacMan move only in the middle of the corridors `ff` `in progress`
     * Make it change direction only on a crossing for the other three directions `ff`
-    * Enter all missing crossings and their allowed directions `ff`
+    * Enter all missing crossings and their allowed directions `ff` `done`

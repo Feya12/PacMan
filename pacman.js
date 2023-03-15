@@ -21,7 +21,7 @@ function gameLoop() {
     //                                                //coordinates to the:
     [130, 119, "ArrowUp", "ArrowDown", "ArrowLeft"],  //first wall right
     [130,  50, "ArrowUp", "ArrowDown", "ArrowRight"], //first wall left
-    [87,  116, "ArrowDown", "ArrowLeft"],             //wall right from the red ghost
+    [87,  119, "ArrowDown", "ArrowLeft"],             //wall right from the red ghost
     [49,   87, "ArrowUp", "ArrowLeft", "ArrowRight"], //wall left from the red ghost
     [150, 116, "ArrowUp", "ArrowLeft", "ArrowRight"], //down right
     [150, 50, "ArrowUp", "ArrowLeft", "ArrowRight"],  //down left
@@ -62,6 +62,33 @@ function gameLoop() {
     [35, 35, "ArrowRight", "ArrowLeft"],
     //
     //divided by currTop
+    //
+    //
+    //5px
+    //
+    [5, -15, "ArrowRight", "ArrowDown"],
+    [5, 24, "ArrowLeft", "ArrowRight", "ArrowDown"],
+    [5, 70, "ArrowLeft", "ArrowDown"],
+    [5, 95, "ArrowRight", "ArrowDown"],
+    [5, 144, "ArrowLeft", "ArrowRight", "ArrowDown"],
+    [5, 180, "ArrowLeft", "ArrowDown"],
+    //35px
+    //
+    [35, -15, "ArrowRight", "ArrowUp", "ArrowDown"], 
+    [35, 70, "ArrowLeft", "ArrowRight", "ArrowUp"],
+    [35, 95, "ArrowLeft", "ArrowRight", "ArrowUp"],
+    [35, 119, "ArrowLeft", "ArrowRight", "ArrowDown"],
+    [35, 180, "ArrowLeft", "ArrowUp", "ArrowDown"],
+    //60px
+    //
+    [60, -15, "ArrowRight", "ArrowUp"],
+    [60, 24, "ArrowLeft", "ArrowUp", "ArrowDown"],  
+    [60, 70, "ArrowLeft", "ArrowDown"],
+    [60, 95, "ArrowRight", "ArrowDown"],
+    [60, 119, "ArrowLeft", "ArrowUp"],
+    [60, 130, "ArrowLeft", "ArrowUp"],
+    [60, 144, "ArrowRight", "ArrowUp", "ArrowDown"],
+    [60, 180, "ArrowLeft", "ArrowUp"],
     //
     //154px
     //   
