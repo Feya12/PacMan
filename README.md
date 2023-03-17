@@ -1,4 +1,4 @@
-# 15 March 2023
+# 16 March 2023
 
 * Today
   * From some places in the right part of the labyrinth PacMan does not go left anymore `done`
@@ -18,5 +18,3 @@
 * Homework
   * Why does change of direction react w/ a delay of 3-5 eatable points? `ff`
   * How can we make PacMan move only in the middle of the corridors `ff` `in progress`
-    * Make it change direction only on a crossing for the other three directions `ff` `done`
-    * Enter all missing crossings and their allowed directions `ff` `done`
