@@ -19,12 +19,12 @@ function gameLoop() {
     //
     //currTop,currLeft
     //                                                //coordinates to the:
-    [130, 119, "ArrowUp", "ArrowDown", "ArrowLeft"],  //first wall right
-    [130,  50, "ArrowUp", "ArrowDown", "ArrowRight"], //first wall left
-    [87,  119, "ArrowDown", "ArrowLeft"],             //wall right from the red ghost
-    [49,   87, "ArrowUp", "ArrowLeft", "ArrowRight"], //wall left from the red ghost
-    [150, 116, "ArrowUp", "ArrowLeft", "ArrowRight"], //down right
-    [150,  50, "ArrowUp", "ArrowLeft", "ArrowRight"],  //down left
+    [130, 119, "ArrowUp", "ArrowDown", "ArrowLeft"],    //first wall right
+    [130,  50, "ArrowUp", "ArrowDown", "ArrowRight"],   //first wall left
+    [87,  119, "ArrowDown", "ArrowLeft"],               //wall right from the red ghost
+    [49,   87, "ArrowUp", "ArrowLeft", "ArrowRight"],   //wall left from the red ghost
+    [150, 116, "ArrowUp", "ArrowLeft", "ArrowRight"],   //down right
+    [150,  50, "ArrowUp", "ArrowLeft", "ArrowRight"],   //down left
     [87,   50, "ArrowDown", "ArrowRight"],
     [107, -15, "ArrowRight"],
     [107, 185, "ArrowLeft"],
@@ -120,7 +120,7 @@ function gameLoop() {
     [204, 3, "ArrowLeft", "ArrowRight", "ArrowUp"],
     [204, 24, "ArrowLeft", "ArrowUp"],
     [204, 50, "ArrowRight", "ArrowUp"],
-    [204, 75, "ArrowLeft", "ArrowDown"],
+    [204, 73, "ArrowLeft", "ArrowDown"],
     [204, 97, "ArrowRight", "ArrowDown"],
     [204, 119, "ArrowLeft", "ArrowUp"],
     [204, 144, "ArrowRight", "ArrowUp"],
@@ -214,7 +214,7 @@ function gameLoop() {
 
     case "ArrowUp":
 
-          // Quick & Dirty
+      // Quick & Dirty
       // Later this should be moved into a fuction
       for(var i = 0; i < crossings_and_allowed_directions.length; i++) {
 
@@ -238,7 +238,7 @@ function gameLoop() {
 
     case "ArrowDown":
 
-          // Quick & Dirty
+      // Quick & Dirty
       // Later this should be moved into a fuction
       for(var i = 0; i < crossings_and_allowed_directions.length; i++) {
 
@@ -262,7 +262,7 @@ function gameLoop() {
 
     case "ArrowRight":
 
-          // Quick & Dirty
+      // Quick & Dirty
       // Later this should be moved into a fuction
       for(var i = 0; i < crossings_and_allowed_directions.length; i++) {
 
