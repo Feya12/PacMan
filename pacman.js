@@ -15,6 +15,11 @@ function gameLoop() {
   // Software Model of the Labyrinth
   // Helps us when we need to stop at a wall and turn at a crossing
 
+  var all_directions_allowed = [
+    [154, 144, "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"],
+    [154, 24, "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]
+  ];
+
   var crossings_and_allowed_directions = [
     //
     //currTop,currLeft
@@ -95,11 +100,9 @@ function gameLoop() {
     //
     //154px
     //
-    [154, 24, "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"],
     [154, 73, "ArrowLeft", "ArrowDown"],
     [154, 97, "ArrowRight", "ArrowDown"],
     [154, 119, "ArrowLeft", "ArrowRight", "ArrowUp"],
-    [154, 144, "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"],
     [154, 180, "ArrowLeft", "ArrowDown"],
     //
     //180px
@@ -300,6 +303,7 @@ function gameLoop() {
       }
 
    }
+
 
   //
   //
