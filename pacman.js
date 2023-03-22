@@ -303,7 +303,16 @@ function gameLoop() {
       }
 
    }
+   for(var i = 0; i < all_directions_allowed.length; i++) {
 
+    var element1 = all_directions_allowed[i];
+
+      if((currTop  == element[0]) &&
+        (currLeft == element[1])){
+          window.localStorage.setItem("PacManStop", "true");
+          PacManStop = "true";
+        }
+   }
 
   //
   //
