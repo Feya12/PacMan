@@ -15,10 +15,9 @@ function gameLoop() {
   // Software Model of the Labyrinth
   // Helps us when we need to stop at a wall and turn at a crossing
 
-  var all_directions_allowed = [
-    [154, 144, "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"],
-    [154, 24, "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]
-  ];
+
+    
+
 
   var crossings_and_allowed_directions = [
     //
@@ -36,6 +35,11 @@ function gameLoop() {
     [107, 24, "ArrowLeft", "ArrowDown", "ArrowUp"],
     [107, 144, "ArrowRight", "ArrowDown", "ArrowUp"],
     [107, 119, "ArrowUp", "ArrowDown", "ArrowUp"],
+    //
+    // all_directions_allowed 
+    //
+    [154, 144, "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"],
+    [154, 24, "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"],
     //
     //initial coordinates to be possible to go left
     //
@@ -197,21 +201,21 @@ function gameLoop() {
       // Later this should be moved into a fuction
       for (var i = 0; i < crossings_and_allowed_directions.length; i++) {
 
-        // element is a sub-array of crossings_and_allowed_directions
-        var element = crossings_and_allowed_directions[i];
+    var element = crossings_and_allowed_directions[i];
 
-        if ((currTop == element[0]) &&
-          (currLeft == element[1] &&
-            // Here we check if the direction is allowed
-            element.includes(PressedKey))) {
-
-          // Then we change the direction
-          x = 0;
-          y = -1;
-          // Here we un-stop the PacMan in case it is stopped against a wall
-          window.localStorage.setItem("PacManStop", "false");
-        }
-      }
+    if ((currTop == element[0]) &&
+      (currLeft == element[1] &&
+        // Here we check if the direction is allowed
+        !element.includes(PressedKey))) {
+      window.localStorage.setItem("PacManStop", "true");
+      PacManStop = "true";
+    }
+    else if(currTop == element[0]&&
+    (currLeft == element[1])){
+      window.localStorage.setItem("PacManStop", "false");
+      PacManStop = "false";
+    }
+  }
 
       break;//left
 
@@ -221,19 +225,19 @@ function gameLoop() {
       // Later this should be moved into a fuction
       for (var i = 0; i < crossings_and_allowed_directions.length; i++) {
 
-        // element is a sub-array of crossings_and_allowed_directions
         var element = crossings_and_allowed_directions[i];
-
+    
         if ((currTop == element[0]) &&
           (currLeft == element[1] &&
             // Here we check if the direction is allowed
-            element.includes(PressedKey))) {
-
-          // Then we change the direction
-          x = -1;
-          y = 0;
-          // Here we un-stop the PacMan in case it is stopped against a wall
+            !element.includes(PressedKey))) {
+          window.localStorage.setItem("PacManStop", "true");
+          PacManStop = "true";
+        }
+        else if(currTop == element[0]&&
+        (currLeft == element[1])){
           window.localStorage.setItem("PacManStop", "false");
+          PacManStop = "false";
         }
       }
 
@@ -245,19 +249,19 @@ function gameLoop() {
       // Later this should be moved into a fuction
       for (var i = 0; i < crossings_and_allowed_directions.length; i++) {
 
-        // element is a sub-array of crossings_and_allowed_directions
         var element = crossings_and_allowed_directions[i];
-
+    
         if ((currTop == element[0]) &&
           (currLeft == element[1] &&
             // Here we check if the direction is allowed
-            element.includes(PressedKey))) {
-
-          // Then we change the direction
-          x = 1;
-          y = 0;
-          // Here we un-stop the PacMan in case it is stopped against a wall
+            !element.includes(PressedKey))) {
+          window.localStorage.setItem("PacManStop", "true");
+          PacManStop = "true";
+        }
+        else if(currTop == element[0]&&
+        (currLeft == element[1])){
           window.localStorage.setItem("PacManStop", "false");
+          PacManStop = "false";
         }
       }
 
@@ -269,19 +273,19 @@ function gameLoop() {
       // Later this should be moved into a fuction
       for (var i = 0; i < crossings_and_allowed_directions.length; i++) {
 
-        // element is a sub-array of crossings_and_allowed_directions
         var element = crossings_and_allowed_directions[i];
-
+    
         if ((currTop == element[0]) &&
           (currLeft == element[1] &&
             // Here we check if the direction is allowed
-            element.includes(PressedKey))) {
-
-          // Then we change the direction
-          x = 0;
-          y = 1;
-          // Here we un-stop the PacMan in case it is stopped against a wall
+            !element.includes(PressedKey))) {
+          window.localStorage.setItem("PacManStop", "true");
+          PacManStop = "true";
+        }
+        else if(currTop == element[0]&&
+        (currLeft == element[1])){
           window.localStorage.setItem("PacManStop", "false");
+          PacManStop = "false";
         }
       }
 
@@ -301,11 +305,13 @@ function gameLoop() {
       window.localStorage.setItem("PacManStop", "true");
       PacManStop = "true";
     }
-    //else if(all allowed) pacmanstop false 
-    //move little array in the bigger one
-
+    else if(currTop == element[0]&&
+    (currLeft == element[1])){
+      window.localStorage.setItem("PacManStop", "false");
+      PacManStop = "false";
+    }
   }
-  for (var i = 0; i < all_directions_allowed.length; i++) {
+  /*for (var i = 0; i < all_directions_allowed.length; i++) {
 
     var element1 = all_directions_allowed[i];
 
@@ -319,7 +325,7 @@ function gameLoop() {
       PacManStop = "true";
     }
     
-  }
+  }*/
 
   //
   //
