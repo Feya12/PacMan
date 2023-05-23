@@ -215,13 +215,14 @@ function gameLoop(crossings_and_allowed_directions, currLeft, currTop, PacManSto
   // Brain Decision about change of direction based on pressed key
   switch (PressedKey) {
 
-    case "ArrowLeft":
+    case "ArrowLeft": 
+     // x=1;y=1;
       Arrow();
       break;
       //left
 
     case "ArrowUp":
-
+   
     Arrow();
     break;
     //up
