@@ -1,24 +1,4 @@
-function Arrow(){
-  gameLoop(crossings_and_allowed_directions, currLeft, currTop, PacManStop, moving)
-  for (var i = 0; i < crossings_and_allowed_directions.length; i++) {
-
-    var element = crossings_and_allowed_directions[i];
-
-    if ((currTop == element[0]) &&
-      (currLeft == element[1] &&
-        // Here we check if the direction is allowed
-        !element.includes(PressedKey))) {
-      window.localStorage.setItem("PacManStop", "true");
-      PacManStop = "true";
-    }
-    else if(currTop == element[0]&&
-    (currLeft == element[1])){
-      window.localStorage.setItem("PacManStop", "false");
-      PacManStop = "false";
-    }
-}
-
-function gameLoop(crossings_and_allowed_directions, currLeft, currTop, PacManStop, moving) {
+function gameLoop() {
 
   //
   //
@@ -26,11 +6,11 @@ function gameLoop(crossings_and_allowed_directions, currLeft, currTop, PacManSto
   //
   //
 
-  let moving = document.getElementById("moving");
+  var moving = document.getElementById("moving");
   // Indicates if PacMan should move or stop eg. against a wall
-  let PacManStop = window.localStorage.getItem("PacManStop");
-  let currTop = moving.offsetTop;
-  let currLeft = moving.offsetLeft;
+  var PacManStop = window.localStorage.getItem("PacManStop");
+  var currTop = moving.offsetTop;
+  var currLeft = moving.offsetLeft;
 
   // Software Model of the Labyrinth
   // Helps us when we need to stop at a wall and turn at a crossing
@@ -39,7 +19,7 @@ function gameLoop(crossings_and_allowed_directions, currLeft, currTop, PacManSto
     
 
 
-  const crossings_and_allowed_directions = [
+  var crossings_and_allowed_directions = [
     //
     //currTop,currLeft
     //                                                //coordinates to the:
@@ -215,32 +195,122 @@ function gameLoop(crossings_and_allowed_directions, currLeft, currTop, PacManSto
   // Brain Decision about change of direction based on pressed key
   switch (PressedKey) {
 
-    case "ArrowLeft": 
-     // x=1;y=1;
-      Arrow();
-      break;
-      //left
+    case "ArrowLeft":
+
+      // Quick & Dirty
+      // Later this should be moved into a fuction
+      for (var i = 0; i < crossings_and_allowed_directions.length; i++) {
+
+    var element = crossings_and_allowed_directions[i];
+
+    if ((currTop == element[0]) &&
+      (currLeft == element[1] &&
+        // Here we check if the direction is allowed
+        !element.includes(PressedKey))) {
+      window.localStorage.setItem("PacManStop", "true");
+      PacManStop = "true";
+    }
+    else if(currTop == element[0]&&
+    (currLeft == element[1])){
+      window.localStorage.setItem("PacManStop", "false");
+      PacManStop = "false";
+    }
+  }
+
+      break;//left
 
     case "ArrowUp":
-   
-    Arrow();
-    break;
-    //up
+
+      // Quick & Dirty
+      // Later this should be moved into a fuction
+      for (var i = 0; i < crossings_and_allowed_directions.length; i++) {
+
+        var element = crossings_and_allowed_directions[i];
+    
+        if ((currTop == element[0]) &&
+          (currLeft == element[1] &&
+            // Here we check if the direction is allowed
+            !element.includes(PressedKey))) {
+          window.localStorage.setItem("PacManStop", "true");
+          PacManStop = "true";
+        }
+        else if(currTop == element[0]&&
+        (currLeft == element[1])){
+          window.localStorage.setItem("PacManStop", "false");
+          PacManStop = "false";
+        }
+      }
+
+      break;//up
 
     case "ArrowDown":
-      Arrow();
-      break;
-      //down
+
+      // Quick & Dirty
+      // Later this should be moved into a fuction
+      for (var i = 0; i < crossings_and_allowed_directions.length; i++) {
+
+        var element = crossings_and_allowed_directions[i];
+    
+        if ((currTop == element[0]) &&
+          (currLeft == element[1] &&
+            // Here we check if the direction is allowed
+            !element.includes(PressedKey))) {
+          window.localStorage.setItem("PacManStop", "true");
+          PacManStop = "true";
+        }
+        else if(currTop == element[0]&&
+        (currLeft == element[1])){
+          window.localStorage.setItem("PacManStop", "false");
+          PacManStop = "false";
+        }
+      }
+
+      break;//down
 
     case "ArrowRight":
-      Arrow();
+
+      // Quick & Dirty
+      // Later this should be moved into a fuction
+      for (var i = 0; i < crossings_and_allowed_directions.length; i++) {
+
+        var element = crossings_and_allowed_directions[i];
+    
+        if ((currTop == element[0]) &&
+          (currLeft == element[1] &&
+            // Here we check if the direction is allowed
+            !element.includes(PressedKey))) {
+          window.localStorage.setItem("PacManStop", "true");
+          PacManStop = "true";
+        }
+        else if(currTop == element[0]&&
+        (currLeft == element[1])){
+          window.localStorage.setItem("PacManStop", "false");
+          PacManStop = "false";
+        }
+      }
+
       break;//right
 
   }
-}
 
   // Brain Decision based on a collision w/ a wall
-  Arrow();
+  for (var i = 0; i < crossings_and_allowed_directions.length; i++) {
+
+    var element = crossings_and_allowed_directions[i];
+
+    if ((currTop == element[0]) &&
+      (currLeft == element[1] &&
+        // Here we check if the direction is allowed
+        !element.includes(PressedKey))) {
+      window.localStorage.setItem("PacManStop", "true");
+      PacManStop = "true";
+    }
+    else if(currTop == element[0]&&
+    (currLeft == element[1])){
+      window.localStorage.setItem("PacManStop", "false");
+      PacManStop = "false";
+    }
+  }
   /*for (var i = 0; i < all_directions_allowed.length; i++) {
 
     var element1 = all_directions_allowed[i];
