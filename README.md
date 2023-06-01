@@ -1,4 +1,4 @@
-# 11 May 2023
+# 01 June 2023
 
 * Mantra
   * Notes
