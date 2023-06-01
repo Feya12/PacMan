@@ -5,6 +5,7 @@ function Arrow() {
   let PacManStop = window.localStorage.getItem("PacManStop");
   let currTop = moving.offsetTop;
   let currLeft = moving.offsetLeft;
+  var PressedKey = window.localStorage.getItem("PressedKey");
 
   // Software Model of the Labyrinth
   // Helps us when we need to stop at a wall and turn at a crossing
@@ -148,8 +149,16 @@ function Arrow() {
     else if (currTop == element[0] &&
       (currLeft == element[1])) {
       window.localStorage.setItem("PacManStop", "false");
-      PacManStop = "false";
+      PacManStop = "false";    
+    // Move
+    if ((x != 0) ) {//&& (PacManStop == "false")
+      moving.style.top = currTop + x + "px";
     }
+    // Move
+    if ((y != 0) ) {//&& (PacManStop == "false")
+      moving.style.left = currLeft + y + "px";
+    }
+    }  
   }
 }
 function gameLoop() {
@@ -219,25 +228,25 @@ function gameLoop() {
   switch (PressedKey) {
 
     case "ArrowLeft":
-      Arrow();
+      Arrow(PressedKey, 0, -1);
      // x = 0;
      // y = -1;
       break;//left
 
     case "ArrowUp":
-      Arrow();
+      Arrow(PressedKey, -1, 0);
      // x = -1;
      // y = 0;
       break;//up
 
     case "ArrowDown":
-      Arrow();
+      Arrow(PressedKey, 1, 0);
      // x = 1;
      // y = 0;
       break;//down
 
     case "ArrowRight":
-      Arrow();
+      Arrow(PressedKey, 0, 1);
       // x = 0;
       // y = 1;
       break;//right
@@ -270,14 +279,7 @@ function gameLoop() {
 
   // Here the motion is controlled
 
-  // Move
-  if ((x != 0) && (PacManStop == "false")) {
-    moving.style.top = currTop + x + "px";
-  }
-  // Move
-  if ((y != 0) && (PacManStop == "false")) {
-    moving.style.left = currLeft + y + "px";
-  }
+
 
 } // END OF gameLoop()
 
