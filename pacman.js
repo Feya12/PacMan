@@ -1,11 +1,11 @@
-function Arrow() {
+function Arrow(PressedKey) {
 
   let moving = document.getElementById("moving");
   // Indicates if PacMan should move or stop eg. against a wall
   let PacManStop = window.localStorage.getItem("PacManStop");
   let currTop = moving.offsetTop;
   let currLeft = moving.offsetLeft;
-  var PressedKey = window.localStorage.getItem("PressedKey");
+  // let PressedKey = window.localStorage.getItem("PressedKey");
 
   // Software Model of the Labyrinth
   // Helps us when we need to stop at a wall and turn at a crossing
@@ -135,30 +135,50 @@ function Arrow() {
     [228, 180, "ArrowLeft", "ArrowUp"]
   ];
 
-  for (var i = 0; i < crossings_and_allowed_directions.length; i++) {
+  for (let i = 0; i < crossings_and_allowed_directions.length; i++) {
 
-    var element = crossings_and_allowed_directions[i];
+    let element = crossings_and_allowed_directions[i];
 
-    if ((currTop == element[0]) &&
-      (currLeft == element[1] &&
-        // Here we check if the direction is allowed
-        !element.includes(PressedKey))) {
+    if ((currTop == element[0]) && (currLeft == element[1]) && !element.includes(PressedKey)) {
+
+      console.log('IF=======================')
+      console.log(currTop == element[0])
+      console.log(currLeft == element[1])
+      console.log(!element.includes(PressedKey))
+      console.log(PressedKey)
+
+      console.log(true)
+      console.log(currTop)
+      console.log(currLeft)
+      console.log('ENDIF=======================')
+
+
       window.localStorage.setItem("PacManStop", "true");
       PacManStop = "true";
     }
-    else if (currTop == element[0] &&
-      (currLeft == element[1])) {
+    else if (currTop == element[0] && (currLeft == element[1])) {
+      console.log('ELSEIF=======================')
+
+      console.log(false)
+      console.log(currTop)
+      console.log(currLeft)
+      console.log('ELSEIFEND=======================')
+
       window.localStorage.setItem("PacManStop", "false");
-      PacManStop = "false";    
-    // Move
-    if ((x != 0) ) {//&& (PacManStop == "false")
-      moving.style.top = currTop + x + "px";
+      PacManStop = "false";
+      // Move
+      if (x != 0) {
+        moving.style.top = currTop + x + "px";
+
+      }
+
+      // Move
+      if (y != 0) {
+        moving.style.left = currLeft + y + "px";
+
+      }
+
     }
-    // Move
-    if ((y != 0) ) {//&& (PacManStop == "false")
-      moving.style.left = currLeft + y + "px";
-    }
-    }  
   }
 }
 function gameLoop() {
@@ -169,96 +189,59 @@ function gameLoop() {
   //
   //
 
-  var moving = document.getElementById("moving");
+  let moving = document.getElementById("moving");
   // Indicates if PacMan should move or stop eg. against a wall
-  var PacManStop = window.localStorage.getItem("PacManStop");
-  var currTop = moving.offsetTop;
-  var currLeft = moving.offsetLeft;
+  let PacManStop = window.localStorage.getItem("PacManStop");
+  let currTop = moving.offsetTop;
+  let currLeft = moving.offsetLeft;
 
 
   //Status Report
   document.getElementById("status-x").innerHTML = x;
   document.getElementById("status-y").innerHTML = y;
-  document.getElementById("currTop").innerHTML = currTop;
-  document.getElementById("currLeft").innerHTML = currLeft;
+  document.getElementById("currTop").innerHTML = moving.offsetTop;
+  document.getElementById("currLeft").innerHTML = moving.offsetLeft;
   document.getElementById("PacManStop").innerHTML = PacManStop;
 
-  //
-  //
-  // Brains
-  //
-  //
-
-  // Red Ghost
- /* var redGhost = document.getElementById('ghostRed');
-  var x1 = Math.floor(Math.random() * 30 - 100);
-  var y1 = Math.floor(Math.random() * 30 - 100);
-  redGhost.style.top = x1 + 'px';
-  redGhost.style.left = y1 + 'px';
-
-  // Pink Ghost
-  var pinkGhost = document.getElementById('ghostPink');
-  var x2 = Math.floor(Math.random() * 40 + 65);
-  var y2 = Math.floor(Math.random() * 40 + 65);
-  pinkGhost.style.left = y2 + 'px';
-  pinkGhost.style.top = x2 + 'px';
-
-  // Blue Chost
-  var blueGhost = document.getElementById('ghostBlue');
-  var x3 = Math.floor(Math.random() * 50 - 25);
-  var y3 = Math.floor(Math.random() * 50 - 25);
-  blueGhost.style.left = y3 + 'px';
-  blueGhost.style.top = x3 + 'px';
-
-  // Orange Ghost
-  var orangeGhost = document.getElementById('ghostOrange');
-  var x4 = Math.floor(Math.random() * 65 + 15);
-  var y4 = Math.floor(Math.random() * 65 + 15);
-  orangeGhost.style.left = y4 + 'px';
-  orangeGhost.style.top = x4 + 'px';
-*/
   //
   //
   // Brain of PacMan
   //
   //
-  var PressedKey = window.localStorage.getItem("PressedKey");
+  let PressedKey = window.localStorage.getItem("PressedKey");
 
   // Brain Decision about change of direction based on pressed key
   switch (PressedKey) {
 
     case "ArrowLeft":
-      Arrow(PressedKey, 0, -1);
-     // x = 0;
-     // y = -1;
+      Arrow(PressedKey);
+      x = 0;
+      y = -1;
       break;//left
 
     case "ArrowUp":
-      Arrow(PressedKey, -1, 0);
-     // x = -1;
-     // y = 0;
+      Arrow(PressedKey);
+      x = -1;
+      y = 0;
       break;//up
 
     case "ArrowDown":
-      Arrow(PressedKey, 1, 0);
-     // x = 1;
-     // y = 0;
+      Arrow(PressedKey);
+      x = 1;
+      y = 0;
       break;//down
 
     case "ArrowRight":
-      Arrow(PressedKey, 0, 1);
-      // x = 0;
-      // y = 1;
+      Arrow(PressedKey);
+      x = 0;
+      y = 1;
       break;//right
 
   }
 
   // Brain Decision based on a collision w/ a wall
-  Arrow();
-  /*for (var i = 0; i < all_directions_allowed.length; i++) {
-
-    var element1 = all_directions_allowed[i];
-
+  /*for (let i = 0; i < all_directions_allowed.length; i++) {
+    let element1 = all_directions_allowed[i];
     if ((currTop == element1[0]) &&
       (currLeft == element1[1]) && element1.includes(PressedKey)) {
         window.localStorage.setItem("PacManStop", "false"); 
@@ -267,7 +250,6 @@ function gameLoop() {
     else{
       window.localStorage.setItem("PacManStop", "true");
       PacManStop = "true";
-
       
   }*/
 
@@ -299,6 +281,7 @@ document.addEventListener("keydown", e => {
 // Here we initialise the game
 //
 //
+
 function InitialisePacMan() {
 
   //
@@ -307,17 +290,12 @@ function InitialisePacMan() {
   //
   //
 
-  var moving = document.getElementById("moving");
+  let moving = document.getElementById("moving");
 
   // Initial Coordinates of PacMan
   moving.style.top = "130px";
   moving.style.left = "85px";
 
-  // localStorage can only save a string at the moment
-  window.localStorage.setItem("PacManStop", "false");
-
-  // The Google PacMan begins to move to the left in the beginning of the game
-  //window.localStorage.setItem("Pressedkey", "ArrowLeft");
 
 }
 
@@ -326,6 +304,8 @@ function InitialisePacMan() {
  * This cycles the gameLoop and gives the main heartbeat, determining the overall game speed.
  *
  */
+
+
 setInterval(gameLoop, 20)
 // This is the step of movement
 let x = 0, y = 0;
