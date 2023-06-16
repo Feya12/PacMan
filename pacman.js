@@ -150,7 +150,7 @@ function Arrow(PressedKey) {
         moving.style.top = currTop + x + "px";
       }
       if (y != 0) {
-        moving.style.left = currLeft + y + "px";
+         moving.style.left = currLeft + y + "px";
       }
     }
   }
