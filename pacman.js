@@ -144,8 +144,7 @@ function Arrow(PressedKey) {
 
   }
 
-  if (PacManStop == false) {
-    if (directionsAllowed.includes(PressedKey)) {
+  if (PacManStop == false && directionsAllowed.includes(PressedKey) ) {
       if (x != 0) {
         moving.style.top = currTop + x + "px";
       }
@@ -153,7 +152,6 @@ function Arrow(PressedKey) {
          moving.style.left = currLeft + y + "px";
       }
     }
-  }
 }
 function gameLoop() {
 
