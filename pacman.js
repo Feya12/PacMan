@@ -28,13 +28,14 @@ function Arrow(PressedKey) {
     //
     // all_directions_allowed 
     //
-    [154, 144, "a", "d", "w", "s"],
-    [154, 24, "a", "d", "w", "s"],
+    //[154, 144, "a", "d", "w", "s"],
+    //[154, 24, "a", "d", "w", "s"],
     //
     //endmost right
     //
     [150, 200, "a", "s"],
     [107, 200, "a"],
+    [107, -20, "d"],
     [230, 180, "a", "w"],
     [5, 185, "a", "s"],
     //
@@ -58,6 +59,7 @@ function Arrow(PressedKey) {
     [35, 135, "d", "a"],
     [84, 95, "d", "a", "w"],
     [35, 35, "d", "a"],
+   // [109, 50, "a", "s", "w"]
     //
     //divided by currTop
     //
@@ -88,12 +90,12 @@ function Arrow(PressedKey) {
     [60, 144, "d", "w", "s"],
     [60, 180, "a", "w"],
     //
-    //154px
+    //155px
     //
-    [154, 73, "a", "s"],
-    [154, 97, "d", "s"],
-    [154, 119, "a", "d", "w"],
-    [154, 180, "a", "s"],
+    [155, 73, "a", "s"],
+    [155, 97, "d", "s"],
+    [155, 119, "a", "d", "w"],
+    [155, 180, "a", "s"],
     //
     //180px
     //
@@ -125,12 +127,10 @@ function Arrow(PressedKey) {
     [228, -15, "d", "w"],
     [228, 70, "a", "d", "w"],
     [228, 71, "a", "d", "w"],
-    [228, 73, "a", "w"],
-    [228, 97, "d", "w"],
+    [228, 73, "a", "w", "d"],
+    [228, 97, "d", "w", "a"],
     [228, 180, "a", "w"]
   ];
-
-
 
   for (let i = 0; i < crossings_and_allowed_directions.length; i++) {
     let element = crossings_and_allowed_directions[i];
@@ -138,10 +138,9 @@ function Arrow(PressedKey) {
       PacManStop = false
     }
     else if (currTop == element[0] && currLeft == element[1]) {
-      PacManStop = true
+      PacManStop = false 
       directionsAllowed = element
     }
-
   }
 
   if (PacManStop == false && directionsAllowed.includes(PressedKey) ) {
@@ -165,7 +164,6 @@ function gameLoop() {
   // Indicates if PacMan should move or stop eg. against a wall
   let currTop = moving.offsetTop;
   let currLeft = moving.offsetLeft;
-
 
   //Status Report
   document.getElementById("status-x").innerHTML = x;
@@ -209,12 +207,7 @@ function gameLoop() {
       break;//right
 
   }
-
-
-
   // Here the motion is controlled
-
-
 
 } // END OF gameLoop()
 
@@ -248,7 +241,6 @@ function InitialisePacMan() {
   // Initial Coordinates of PacMan
   moving.style.top = "130px";
   moving.style.left = "85px";
-
 
   x = 1
 
