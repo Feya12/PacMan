@@ -253,8 +253,8 @@ function InitialisePacMan() {
  */
 
 
-setInterval(gameLoop, 20)
+setInterval(gameLoop, 15)
 // This is the step of movement
 let x = 0, y = 0;
 PacManStop = false;
-let directionsAllowed = ["a", "d"]
+let directionsAllowed = ["d", "a"]
